@@ -1,0 +1,32 @@
+$bg: #111e;
+$nav: #111;
+$font-shadow: #0f01;
+$font: #40f04080;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
+@use "sass:string";
+
+
+body{
+    background-color: $bg;
+}
+
+nav{
+    background-color: $nav;
+    a{
+        color: $font;
+        text-shadow: -2px 2px 2px $font-shadow;
+        font-weight: bold;
+    }
+
+    span.navbar-toggler-icon{
+        color: $font;
+    }
+        
+
+    .navbar-toggler{
+        border: 2px solid $font;
+        box-shadow: -2px 2px 4px 3px $font-shadow;
+        
+    }
+    
+    box-shadow: -2px 2px 5px 3px $font-shadow;
+}

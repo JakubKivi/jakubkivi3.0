@@ -1,0 +1,20 @@
+body {
+  background-color: rgba(17, 17, 17, 0.9333333333);
+}
+
+nav {
+  background-color: #111;
+  box-shadow: -2px 2px 5px 3px rgba(0, 255, 0, 0.0666666667);
+}
+nav a {
+  color: rgba(64, 240, 64, 0.5019607843);
+  text-shadow: -2px 2px 2px rgba(0, 255, 0, 0.0666666667);
+  font-weight: bold;
+}
+nav span.navbar-toggler-icon {
+  color: rgba(64, 240, 64, 0.5019607843);
+}
+nav .navbar-toggler {
+  border: 2px solid rgba(64, 240, 64, 0.5019607843);
+  box-shadow: -2px 2px 4px 3px rgba(0, 255, 0, 0.0666666667);
+}/*# sourceMappingURL=style.css.map */
