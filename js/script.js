@@ -18,7 +18,7 @@ window.setInterval(function(){
 var  iTyping = 0;
 var jTyping=0;
 var txt = ['Programmer.', 'Robocisit.','Electronic engineer.', 'Traveller.'];
-var speed = 200;
+var speed = 60;
 let delay = 5;
 var backspace = false;
 

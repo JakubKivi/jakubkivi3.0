@@ -23,33 +23,69 @@ nav .navbar-toggler i {
   text-shadow: -2px 2px 3px rgba(0, 255, 0, 0.0666666667), -2px 2px 3px rgba(0, 255, 0, 0.0666666667);
 }
 
-.starting-div {
+.starting-left-div {
   height: 100vh;
-  width: 50%;
   color: rgba(64, 240, 64, 0.5019607843);
   text-align: center;
   text-shadow: -4px 4px 4px rgba(0, 255, 0, 0.0666666667), -4px 4px 4px rgba(0, 255, 0, 0.0666666667);
 }
-.starting-div .first-line {
-  width: 90vw;
-  font-weight: bolder;
+@media only screen and (max-width: 768px) {
+  .starting-left-div {
+    height: 50vh;
+  }
+}
+.starting-left-div .first-line {
+  font-weight: bold;
   font-size: 3vw;
 }
-.starting-div .second-line {
-  width: 90vw;
-  height: auto;
+@media only screen and (max-width: 768px) {
+  .starting-left-div .first-line {
+    font-size: 4vh;
+  }
+}
+.starting-left-div .second-line {
   font-weight: bold;
   font-size: 2vw;
-  height: 2.7rem;
 }
-.starting-div .second-line div {
+@media only screen and (max-width: 768px) {
+  .starting-left-div .second-line {
+    font-size: 4vh;
+  }
+}
+.starting-left-div .second-line div {
   display: inline-block;
 }
-.starting-div .second-line .square {
+.starting-left-div .second-line .square {
   font-size: 2.7vw;
   position: relative;
   left: -0.5vw;
 }
-.starting-div .second-line .square-blink-off {
-  opacity: 0;
+@media only screen and (max-width: 768px) {
+  .starting-left-div .second-line .square {
+    font-size: 5vh;
+  }
+}
+
+.starting-right-div {
+  height: 100vh;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .starting-right-div {
+    height: 50vh;
+  }
+}
+.starting-right-div div .img-me {
+  max-width: 100%;
+  max-height: 60vh;
+}
+@media only screen and (max-width: 768px) {
+  .starting-right-div div .img-me {
+    max-height: 40vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .starting-right-div div {
+    max-height: 50vh;
+  }
 }/*# sourceMappingURL=style.css.map */

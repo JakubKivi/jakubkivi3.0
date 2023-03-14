@@ -34,23 +34,28 @@ nav{
     box-shadow: -2px 2px 5px 3px $font-shadow;
 }
 
-.starting-div{
+.starting-left-div{
     height: 100vh; 
-    width: 50%; 
+    @media only screen and (max-width: 768px) {
+        height: 50vh; 
+    }
+    // width: 50%; 
     color: $font;
     text-align: center;
     text-shadow:   -4px 4px 4px $font-shadow, -4px 4px 4px $font-shadow;
     .first-line{
-        width: 90vw;
-        font-weight: bolder;
+        font-weight: bold;
         font-size: 3vw;
+        @media only screen and (max-width: 768px) {
+            font-size: 4vh;
+        }
     }
     .second-line{
-        width: 90vw;
-        height: auto;
         font-weight: bold;
         font-size: 2vw;
-        height: 2.7rem;
+        @media only screen and (max-width: 768px) {
+            font-size: 4vh;
+        }
         div{
             display: inline-block;
         }
@@ -59,10 +64,32 @@ nav{
             font-size: 2.7vw;
             position: relative;
             left: -0.5vw;
+            @media only screen and (max-width: 768px) {
+                font-size: 5vh;
+            }
         }
+    }
+    
+}
+.starting-right-div {
 
-        .square-blink-off{
-            opacity: 0;
+    height: 100vh; 
+    @media only screen and (max-width: 768px) {
+        height: 50vh; 
+    }
+    text-align: center;
+    div{
+        
+        
+        .img-me{
+            max-width: 100%;
+            max-height: 60vh;
+            @media only screen and (max-width: 768px) {
+            max-height: 40vh;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            max-height: 50vh;
         }
     }
 }
