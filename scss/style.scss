@@ -20,13 +20,49 @@ nav{
     span.navbar-toggler-icon{
         color: $font;
     }
-        
+    
 
     .navbar-toggler{
         border: 2px solid $font;
         box-shadow: -2px 2px 4px 3px $font-shadow;
-        
+        i{
+            color: $font;
+            text-shadow: -2px 2px 3px $font-shadow, -2px 2px 3px $font-shadow;
+        }
     }
     
     box-shadow: -2px 2px 5px 3px $font-shadow;
+}
+
+.starting-div{
+    height: 100vh; 
+    width: 50%; 
+    color: $font;
+    text-align: center;
+    text-shadow:   -4px 4px 4px $font-shadow, -4px 4px 4px $font-shadow;
+    .first-line{
+        width: 90vw;
+        font-weight: bolder;
+        font-size: 3vw;
+    }
+    .second-line{
+        width: 90vw;
+        height: auto;
+        font-weight: bold;
+        font-size: 2vw;
+        height: 2.7rem;
+        div{
+            display: inline-block;
+        }
+        
+        .square{
+            font-size: 2.7vw;
+            position: relative;
+            left: -0.5vw;
+        }
+
+        .square-blink-off{
+            opacity: 0;
+        }
+    }
 }
