@@ -136,6 +136,16 @@ nav .navbar-toggler i {
   border-radius: 1vw;
   box-shadow: -3px 3px 4px 2px rgba(148, 53, 18, 0.3607843137);
 }
+@keyframes note-shadow-on-animation {
+  50% {
+    box-shadow: 0 0 4px 0.3px rgba(197, 92, 17, 0.8784313725);
+  }
+}
+@keyframes note-shadow-off-animation {
+  50% {
+    box-shadow: 0 0 4px 1px #110505;
+  }
+}
 .about .left-row .box .box-box {
   margin-top: 3vh;
   margin-left: 3vw;
@@ -144,13 +154,12 @@ nav .navbar-toggler i {
   width: 16vw;
   float: left;
   background-color: rgba(197, 92, 17, 0.7490196078);
-  box-shadow: 0 0 4px 1px rgba(197, 92, 17, 0.8784313725);
-  transition: 3s;
+  transition: background-color 0.3s;
+  animation: note-shadow-on-animation 0.3s;
 }
 .about .left-row .box .box-box:hover {
   background-color: #110505;
-  box-shadow: 0 0 4px 1px #110505;
-  transition: 3s;
+  transition: background-color 0.3s;
+  animation: note-shadow-off-animation 0.3s;
   cursor: pointer;
-  border: solid 3px #110505;
 }/*# sourceMappingURL=style.css.map */

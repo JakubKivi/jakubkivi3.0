@@ -142,7 +142,12 @@ nav{
             border-radius: 1vw;
             box-shadow: -3px 3px 4px 2px $font-shadow;
 
-
+            @keyframes note-shadow-on-animation{
+                50% {box-shadow: 0 0 4px 0.3px $note-shadow;}
+            }
+            @keyframes note-shadow-off-animation{
+                50% {box-shadow: 0 0 4px 1px $start-bg-1;}
+            }
             .box-box{
                 margin-top: 3vh;
                 margin-left: 3vw;
@@ -151,16 +156,14 @@ nav{
                 width: 16vw;
                 float: left;
                 background-color: $note;  
-                box-shadow: 0 0 4px 1px $note-shadow;
-                transition: 3s;
-                
+                transition: background-color 0.3s;
+                animation: note-shadow-on-animation 0.3s;
             }
             .box-box:hover{
                 background-color: $start-bg-1;  
-                box-shadow: 0 0 4px 1px $start-bg-1;
-                transition: 3s;
+                transition: background-color 0.3s;
+                animation: note-shadow-off-animation 0.3s;
                 cursor: pointer;
-                border: solid 3px $start-bg-1;
               }
         }
     }
