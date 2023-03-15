@@ -1,7 +1,7 @@
 $bg: #111e;
 $nav: #111;
-$font-shadow: #0f01;
-$font: #40f04080;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
+$font-shadow: #9435125c;
+$font: #c55c11e6;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
 @use "sass:string";
 
 
@@ -37,7 +37,7 @@ nav{
 .starting-left-div{
     height: 100vh; 
     @media only screen and (max-width: 768px) {
-        height: 50vh; 
+        height: 40vh; 
     }
     // width: 50%; 
     color: $font;
@@ -68,6 +68,9 @@ nav{
                 font-size: 5vh;
             }
         }
+        .square-blink-off{
+            opacity: 0;
+        }
     }
     
 }
@@ -84,6 +87,7 @@ nav{
         .img-me{
             max-width: 100%;
             max-height: 60vh;
+            border-radius: 0.2vw;
             @media only screen and (max-width: 768px) {
             max-height: 40vh;
             }

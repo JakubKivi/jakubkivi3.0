@@ -18,8 +18,7 @@ window.setInterval(function(){
 var  iTyping = 0;
 var jTyping=0;
 var txt = ['Programmer.', 'Robocisit.','Electronic engineer.', 'Traveller.'];
-var speed = 60;
-let delay = 5;
+var speed = 70;
 var backspace = false;
 
 var text = document.getElementById("second-line-text");
@@ -27,15 +26,15 @@ var text = document.getElementById("second-line-text");
 async function typing() {
   text.textContent = txt[jTyping].substring(0, iTyping);
 
-  if ( iTyping > txt[jTyping].length + delay){
-    await new Promise(r => setTimeout(r, 3000));
+  if ( iTyping > txt[jTyping].length){
+    await new Promise(r => setTimeout(r, 2000));
     backspace = true;
   } 
   if ( iTyping == -1) backspace = false;
   iTyping =  iTyping + (backspace ? -1 : 1);
   if( iTyping != -1) setTimeout(typing, speed);
   else{
-    await new Promise(r => setTimeout(r, 2000));
+    await new Promise(r => setTimeout(r, 1500));
     jTyping+=1;
     if(jTyping >= txt.length) jTyping=0;
     typing();
