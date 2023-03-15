@@ -2,6 +2,16 @@ $bg: #111e;
 $nav: #111;
 $font-shadow: #9435125c;
 $font: #c55c11e6;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
+
+$start-bg-1: #110505;
+$start-bg-2: #331111;
+
+$notes: $start-bg-2;
+$note: #c55c11bf;
+$note-shadow: #c55c11e0;
+$note-border: $note;
+
+
 @use "sass:string";
 
 
@@ -13,7 +23,7 @@ nav{
     background-color: $nav;
     a{
         color: $font;
-        text-shadow: -2px 2px 2px $font-shadow;
+        text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
         font-weight: bold;
     }
 
@@ -33,67 +43,137 @@ nav{
     
     box-shadow: -2px 2px 5px 3px $font-shadow;
 }
-
-.starting-left-div{
-    height: 100vh; 
-    @media only screen and (max-width: 768px) {
-        height: 40vh; 
+.start{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, $start-bg-1, $start-bg-2);
+    @media only screen and (max-width: 769px) {
+        background-image: linear-gradient($start-bg-1, $start-bg-2);
     }
-    // width: 50%; 
-    color: $font;
-    text-align: center;
-    text-shadow:   -4px 4px 4px $font-shadow, -4px 4px 4px $font-shadow;
-    .first-line{
-        font-weight: bold;
-        font-size: 3vw;
-        @media only screen and (max-width: 768px) {
-            font-size: 4vh;
+    .starting-left-div{
+        height: 100vh; 
+        @media only screen and (max-width: 769px) {
+            height: 40vh; 
+        }
+        color: $font;
+        text-align: center;
+        text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+        .first-line{
+            font-weight: bold;
+            font-size: 2.5vw;
+            text{
+                font-size: 3vw;
+            }
+            @media only screen and (max-width: 769px) {
+                font-size: 4vh;
+                text{
+                    font-size: 4.5vh;
+                }
+            }
+        }
+        .second-line{
+            font-weight: bold;
+            font-size: 2vw;
+            @media only screen and (max-width: 769px) {
+                font-size: 3.5vh;
+            }
+            div{
+                display: inline-block;
+            }
+            .square{
+                font-size: 2.7vw;
+                position: relative;
+                left: -0.5vw;
+                @media only screen and (max-width: 769px) {
+                    font-size: 5vh;
+                }
+            }
+            .square-blink-off{
+                opacity: 0;
+            }
         }
     }
-    .second-line{
-        font-weight: bold;
-        font-size: 2vw;
-        @media only screen and (max-width: 768px) {
-            font-size: 4vh;
+    .starting-right-div {
+        height: 100vh; 
+        text-align: center;
+        @media only screen and (max-width: 769px) {
+            height: 50vh; 
         }
         div{
-            display: inline-block;
-        }
-        
-        .square{
-            font-size: 2.7vw;
-            position: relative;
-            left: -0.5vw;
-            @media only screen and (max-width: 768px) {
-                font-size: 5vh;
+            .img-me{
+                max-width: 100%;
+                max-height: 60vh;
+                border-radius: 0.2vw;
+                box-shadow: -2px 2px 4px 1px $font-shadow;
+                @media only screen and (max-width: 769px) {
+                max-height: 40vh;
+                }
+            }
+            @media only screen and (max-width: 769px) {
+                max-height: 50vh;
             }
         }
-        .square-blink-off{
-            opacity: 0;
-        }
     }
-    
 }
-.starting-right-div {
 
-    height: 100vh; 
-    @media only screen and (max-width: 768px) {
-        height: 50vh; 
-    }
-    text-align: center;
-    div{
-        
-        
-        .img-me{
-            max-width: 100%;
-            max-height: 60vh;
-            border-radius: 0.2vw;
-            @media only screen and (max-width: 768px) {
-            max-height: 40vh;
+.divider-neon{
+    height: 1px;
+    width: auto;
+    box-shadow: 0 0 5px 5px $font-shadow;
+    background-color: $font;
+
+}
+
+
+.about{
+    height: 100%;
+    width: 100%;
+    background-color: $start-bg-1;
+    .left-row{
+        height: 100vh;
+        padding-top: 10vh;
+        .box{
+            padding-top: 8vh;
+            width: 80vw;
+            height: 80vh;
+            margin-left: 10%;
+            background-color: $notes;
+            border: solid 0.3vw $font;
+            border-radius: 1vw;
+            box-shadow: -3px 3px 4px 2px $font-shadow;
+
+
+            .box-box{
+                margin-top: 3vh;
+                margin-left: 3vw;
+                margin-right: 0;
+                height: 14vh;
+                width: 16vw;
+                float: left;
+                background-color: $note;  
+                box-shadow: 0 0 4px 1px $note-shadow;
+                transition: 3s;
+                
             }
-        }
-        @media only screen and (max-width: 768px) {
-            max-height: 50vh;
+            .box-box:hover{
+                background-color: $start-bg-1;  
+                box-shadow: 0 0 4px 1px $start-bg-1;
+                transition: 3s;
+                cursor: pointer;
+                border: solid 3px $start-bg-1;
+              }
         }
     }
 }
+
+// .popup{
+//     width:200px;
+//     height:200px;
+//     position: fixed;
+//     background-color: blue;
+//     top: 50%;
+//     left: 50%;
+//     margin-top: -100px;
+//     margin-left: -100px;
+
+// }
