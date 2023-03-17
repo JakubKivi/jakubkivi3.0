@@ -6,10 +6,12 @@ $font: #c55c11e6;  //You are also obligated to change 'nav-toggler-span-icon' va
 $start-bg-1: #110505;
 $start-bg-2: #331111;
 
-$notes: $start-bg-2;
+$notes-bg-1: $start-bg-2;
+$notes-bg-2: $start-bg-2;
 $note: #c55c11bf;
 $note-shadow: #c55c11e0;
 $note-border: $note;
+$note-hover-time: 0.3s;
 
 
 @use "sass:string";
@@ -97,29 +99,32 @@ nav{
         height: 100vh; 
         text-align: center;
         @media only screen and (max-width: 769px) {
+            margin-top: 5vh;
+            margin-bottom: 5vh;
             height: 50vh; 
         }
         div{
             .img-me{
                 max-width: 100%;
-                max-height: 60vh;
                 border-radius: 0.2vw;
                 box-shadow: -2px 2px 4px 1px $font-shadow;
+                max-height: 60vh;
                 @media only screen and (max-width: 769px) {
                 max-height: 40vh;
+                margin-top: 10vh;
                 }
             }
             @media only screen and (max-width: 769px) {
-                max-height: 50vh;
+                max-height: 40vh;
             }
         }
     }
 }
 
 .divider-neon{
-    height: 1px;
+    height: 0.1rem;
     width: auto;
-    box-shadow: 0 0 5px 5px $font-shadow;
+    box-shadow: 0 2px 5px 5px $font-shadow;  //todo shadow w dół
     background-color: $font;
 
 }
@@ -130,39 +135,56 @@ nav{
     width: 100%;
     background-color: $start-bg-1;
     .left-row{
-        height: 100vh;
         padding-top: 10vh;
+        padding-bottom: 10vh;
         .box{
-            padding-top: 8vh;
-            width: 80vw;
-            height: 80vh;
-            margin-left: 10%;
-            background-color: $notes;
+            padding: 1rem;
+
+            width: 90%;
+            margin-left: 5vw;
+            background-image: linear-gradient($notes-bg-2, $notes-bg-1);
             border: solid 0.3vw $font;
-            border-radius: 1vw;
+            border-radius: 0.5rem;
             box-shadow: -3px 3px 4px 2px $font-shadow;
 
+            .portfolio-text{
+                color: #fff;
+            }
+
+            .row{
+                margin-bottom: 0;
+            }
             @keyframes note-shadow-on-animation{
                 50% {box-shadow: 0 0 4px 0.3px $note-shadow;}
             }
             @keyframes note-shadow-off-animation{
                 50% {box-shadow: 0 0 4px 1px $start-bg-1;}
             }
+
             .box-box{
-                margin-top: 3vh;
-                margin-left: 3vw;
-                margin-right: 0;
-                height: 14vh;
-                width: 16vw;
-                float: left;
-                background-color: $note;  
-                transition: background-color 0.3s;
-                animation: note-shadow-on-animation 0.3s;
+                vertical-align: middle;
+                margin-bottom: 0.5rem;
             }
-            .box-box:hover{
+            .box-box  div{
+                background-color: $note;  
+                padding: 0.7rem;
+                box-shadow: 0 0 4px 0.3px $note-shadow;
+                transition: $note-hover-time ease-in-out;
+                border-radius: 0.4rem;
+                align-items: center;
+                display: inline-block;
+                img{
+                    margin: 5%;
+                    max-width: 90%;
+                    display: flex;
+                    max-height: 90%;
+                    
+                }
+            }
+            .box-box div:hover{
                 background-color: $start-bg-1;  
-                transition: background-color 0.3s;
-                animation: note-shadow-off-animation 0.3s;
+                box-shadow: 0 0 4px 1px $start-bg-1;
+                transition: $note-hover-time ease-in-out;
                 cursor: pointer;
               }
         }
