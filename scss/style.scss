@@ -27,6 +27,9 @@ nav{
         color: $font;
         text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
         font-weight: bold;
+        &:hover{
+            color: $font-shadow;
+        }
     }
 
     span.navbar-toggler-icon{
@@ -131,16 +134,18 @@ nav{
 
 
 .about{
-    height: 100%;
     width: 100%;
     background-color: $start-bg-1;
-    .left-row{
+    .row{
+        margin-right: 0;
+    }
+    .about-col{
         padding-top: 10vh;
         padding-bottom: 10vh;
         .box{
             padding: 1rem;
 
-            width: 90%;
+            width: 92%;
             margin-left: 5vw;
             background-image: linear-gradient($notes-bg-2, $notes-bg-1);
             border: solid 0.3vw $font;
@@ -148,7 +153,10 @@ nav{
             box-shadow: -3px 3px 4px 2px $font-shadow;
 
             .portfolio-text{
-                color: #fff;
+                text-align: center;
+                color: $font;
+                font-weight: bold;
+                text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             }
 
             .row{
@@ -167,38 +175,34 @@ nav{
             }
             .box-box  div{
                 background-color: $note;  
-                padding: 0.7rem;
+                padding: 0.3vw;
                 box-shadow: 0 0 4px 0.3px $note-shadow;
                 transition: $note-hover-time ease-in-out;
                 border-radius: 0.4rem;
                 align-items: center;
                 display: inline-block;
+                &:hover{
+                    background-color: $font-shadow;  
+                    box-shadow: 0 0 0px 0px $start-bg-1;
+                    transition: $note-hover-time ease-in-out;
+                    cursor: pointer;
+                }
                 img{
-                    margin: 5%;
-                    max-width: 90%;
+                    margin: 0%;
+                    max-width: 100%;
                     display: flex;
-                    max-height: 90%;
+                    max-height: 100%;
                     
                 }
             }
-            .box-box div:hover{
-                background-color: $start-bg-1;  
-                box-shadow: 0 0 4px 1px $start-bg-1;
-                transition: $note-hover-time ease-in-out;
-                cursor: pointer;
-              }
+        }
+        .right-box{
+            margin-left: 3vw;
+            margin-right: 0;
+            display: block;
+            @media only screen and (max-width: 769px) {
+                display: none;
+            }
         }
     }
 }
-
-// .popup{
-//     width:200px;
-//     height:200px;
-//     position: fixed;
-//     background-color: blue;
-//     top: 50%;
-//     left: 50%;
-//     margin-top: -100px;
-//     margin-left: -100px;
-
-// }
