@@ -79,58 +79,58 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col ml-auto">
-                                        <div class="portfolio-text ml-auto mr-auto">
+                                        <div class="portfolio-text-header ml-auto mr-auto">
                                             Portfolio
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-4 col-lg-3 box-box">
-                                        <div>
+                                <div class="row portfolio-selector">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="1">
+                                        <div class="active">
                                             <img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                             </div>
                                         </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="2">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div>  
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="3">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div>  
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="4">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div>  
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="5">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div>  
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="6">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div>  
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="7">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div> 
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="8">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div> 
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="9">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div> 
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="10">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div> 
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="11">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div> 
                                     </div>
-                                    <div class="col-4 col-lg-3 box-box">
+                                    <div class="col-4 col-lg-3 box-box" data-userid="12">
                                         <div><img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="">
                                         </div> 
                                     </div>
@@ -140,23 +140,106 @@
                     </div>
                 </div>
                 <div class="about-col col-md-7">
-                    <div class="box right-box">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col ml-auto">
-                                </div>
+                    <div class="box right-box" id="right-column">
+                        <div class="row ml-auto mr-auto w-100">
+                            <div class="portfolio-text-header ml-auto mr-auto" id="portfolio-title">
+                                CałkaBots 
                             </div>
+                        </div>
+                        <div class="">
+                            <div class="img-container"  id="portfolio-image">
+                                <a href="assets/portfolio/calk/1.jpg">
+                                    <img src="assets/portfolio/calk/1.jpg" alt="error">
+                                </a>
+                            </div>
+                            
+                            
+                            <p class="portfolio-text"  id="portfolio-text">
+                                CałkaBots are minisumo robots created by me and my friend Jakub Delicat. The first one, CałkaBot 1.0 was made in 2018 for miniSUMO competition in UTP in Bydgoszcz. We were first grade students then, and we weren't experienced enough, so it was a huge surprise when we got to a semifinal group. The second one, CałkaBot 2.0, was made the following year and won a special prize in Bydgoszcz. We have been appreciated for the progress and for a PCB board project made by Deli. With both robots, improved to versions 1.1 and 2.1, we have gone to Baltic Robo Battles, to face up univeristy students. We weren't surprised when we have lost most of the battles, but CałkaBots were hard opponent many times. We have even managed to win some of the battles against students of technical universities. 
+                            </p>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>
         
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content"  id="modal-1">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CałkaBots</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="img-container">
+                            <a href="assets/portfolio/calk/1.jpg">
+                                <img src="assets/portfolio/calk/1.jpg" alt="error">
+                            </a>
+                        </div>
+                        
+                        
+                        <p class="portfolio-text">
+                            CałkaBots are minisumo robots created by me and my friend Jakub Delicat. The first one, CałkaBot 1.0 was made in 2018 for miniSUMO competition in UTP in Bydgoszcz. We were first grade students then, and we weren't experienced enough, so it was a huge surprise when we got to a semifinal group. The second one, CałkaBot 2.0, was made the following year and won a special prize in Bydgoszcz. We have been appreciated for the progress and for a PCB board project made by Deli. With both robots, improved to versions 1.1 and 2.1, we have gone to Baltic Robo Battles, to face up univeristy students. We weren't surprised when we have lost most of the battles, but CałkaBots were hard opponent many times. We have even managed to win some of the battles against students of technical universities. 
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+            Launch demo modal2
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content" id="modal-2">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ARA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="img-container">
+                            <a href="assets/portfolio/calk/1.jpg">
+                                <img src="assets/portfolio/ara/1.png" alt="error">
+                            </a>
+                        </div>
+                        
+                        <p class="portfolio-text">
+                            ARA is a C++ and SFML library game, made by a group of friends during winter holiday in 2019 as a challange to make a game in only two weeks. It's a turn-based game simmilar to chess seemingly, but has huge twists, like different figures' moves, removal of the map or two moves each turn. The rules might be strange and tricky at first, but after a few games they start to make sense, and you have a lot of fun playing the game. After winter holiday my friends practiclally abandoned the game projects. I am adding new graphics made by, of course, our graphic designer, and still, when I have some free time I am making some improvements. Hope that game will be fully playable and downloadable at the end of 2021.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
         <!-- Bootstrap and jquerry-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-        <script src="js/script.js"></script> 
+        <script src="js/typing.js"></script> 
+        <script src="js/portfolio.js"></script> 
     </body>
 </html>

@@ -143,10 +143,11 @@ nav .navbar-toggler i {
   border-radius: 0.5rem;
   box-shadow: -3px 3px 4px 2px rgba(148, 53, 18, 0.3607843137);
 }
-.about .about-col .box .portfolio-text {
+.about .about-col .box .portfolio-text-header {
   text-align: center;
   color: rgba(197, 92, 17, 0.9019607843);
   font-weight: bold;
+  font-size: 1.4rem;
   text-shadow: 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137);
 }
 .about .about-col .box .row {
@@ -163,31 +164,33 @@ nav .navbar-toggler i {
   }
 }
 .about .about-col .box .box-box {
-  vertical-align: middle;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0 !important;
+  padding: 0.6rem !important;
+}
+.about .about-col .box .box-box .active {
+  background-color: rgba(148, 53, 18, 0.3607843137);
+  box-shadow: 0 0 2px 2px rgba(148, 53, 18, 0.3607843137);
 }
 .about .about-col .box .box-box div {
-  background-color: rgba(197, 92, 17, 0.7490196078);
-  padding: 0.3vw;
+  background-color: rgba(197, 92, 17, 0.6980392157);
+  padding: 0vw;
   box-shadow: 0 0 4px 0.3px rgba(197, 92, 17, 0.8784313725);
   transition: 0.3s ease-in-out;
   border-radius: 0.4rem;
-  align-items: center;
-  display: inline-block;
 }
 .about .about-col .box .box-box div:hover {
   background-color: rgba(148, 53, 18, 0.3607843137);
-  box-shadow: 0 0 0px 0px #110505;
+  box-shadow: 0 0 0px 0px rgba(148, 53, 18, 0.3607843137);
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 .about .about-col .box .box-box div img {
   margin: 0%;
   max-width: 100%;
-  display: flex;
   max-height: 100%;
 }
 .about .about-col .right-box {
+  transition: opacity 0.4s linear;
   margin-left: 3vw;
   margin-right: 0;
   display: block;
@@ -196,4 +199,31 @@ nav .navbar-toggler i {
   .about .about-col .right-box {
     display: none;
   }
+}
+.about .about-col .right-box img {
+  margin-top: 0.6rem;
+  float: left;
+  width: 30vh;
+  margin-right: 0.5rem;
+}
+.about .about-col .right-box .portfolio-text {
+  margin-top: 0.2rem;
+  text-align: justify;
+  color: rgb(255, 206, 183);
+  font-size: 1rem;
+  width: 100%;
+}
+
+.modal img {
+  margin-top: 0.6rem;
+  float: left;
+  width: 30vh;
+  margin-right: 0.5rem;
+}
+.modal .portfolio-text {
+  margin-top: 0.2rem;
+  text-align: justify;
+  color: rgb(255, 206, 183);
+  font-size: 1rem;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

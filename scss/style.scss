@@ -2,13 +2,15 @@ $bg: #111e;
 $nav: #111;
 $font-shadow: #9435125c;
 $font: #c55c11e6;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
+$fonr-portfolio: rgb(255, 206, 183);
 
 $start-bg-1: #110505;
 $start-bg-2: #331111;
 
 $notes-bg-1: $start-bg-2;
 $notes-bg-2: $start-bg-2;
-$note: #c55c11bf;
+$note: #c55c11b2;
+$note-active: #9435125c;
 $note-shadow: #c55c11e0;
 $note-border: $note;
 $note-hover-time: 0.3s;
@@ -152,10 +154,11 @@ nav{
             border-radius: 0.5rem;
             box-shadow: -3px 3px 4px 2px $font-shadow;
 
-            .portfolio-text{
+            .portfolio-text-header{
                 text-align: center;
                 color: $font;
                 font-weight: bold;
+                font-size: 1.4rem;
                 text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             }
 
@@ -170,39 +173,76 @@ nav{
             }
 
             .box-box{
-                vertical-align: middle;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0 !important;
+                padding: 0.6rem !important;
+                .active{
+                    background-color: $note-active;  
+                    box-shadow: 0 0 2px 2px $note-active;
+                }
             }
             .box-box  div{
                 background-color: $note;  
-                padding: 0.3vw;
+                padding: 0vw;
                 box-shadow: 0 0 4px 0.3px $note-shadow;
                 transition: $note-hover-time ease-in-out;
                 border-radius: 0.4rem;
-                align-items: center;
-                display: inline-block;
                 &:hover{
                     background-color: $font-shadow;  
-                    box-shadow: 0 0 0px 0px $start-bg-1;
+                    box-shadow: 0 0 0px 0px $font-shadow;
                     transition: $note-hover-time ease-in-out;
                     cursor: pointer;
                 }
                 img{
                     margin: 0%;
                     max-width: 100%;
-                    display: flex;
                     max-height: 100%;
                     
                 }
             }
         }
         .right-box{
+            transition: opacity .4s linear;
             margin-left: 3vw;
             margin-right: 0;
             display: block;
             @media only screen and (max-width: 769px) {
                 display: none;
             }
+            img{
+                margin-top: 0.6rem;
+                float: left;
+                width: 30vh;
+                margin-right: 0.5rem;
+            }
+            
+            .portfolio-text{
+                margin-top: 0.2rem;
+                text-align: justify;
+                color: $fonr-portfolio;
+                font-size: 1rem;
+                // float: left;
+                width: 100%;
+                // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+            }
         }
+    }
+}
+
+.modal{
+    img{
+        margin-top: 0.6rem;
+        float: left;
+        width: 30vh;
+        margin-right: 0.5rem;
+    }
+    
+    .portfolio-text{
+        margin-top: 0.2rem;
+        text-align: justify;
+        color: $fonr-portfolio;
+        font-size: 1rem;
+        // float: left;
+        width: 100%;
+        // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
     }
 }
