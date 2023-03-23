@@ -17,11 +17,11 @@ async function onSelectorClicked(element){
         
         await new Promise(r => setTimeout(r, 500));
 
-        ChangePortfolioContent(id);
+        ChangePortfolioContent(id, rightColumn);
     }
 }
 
-function ChangePortfolioContent(a){
+function ChangePortfolioContent(a, r){
     var myModal = document.getElementById("modal-"+a);
     
     document.getElementById("portfolio-text").innerHTML = 
@@ -33,6 +33,5 @@ function ChangePortfolioContent(a){
     document.getElementById("portfolio-title").innerHTML = 
     myModal.getElementsByClassName("modal-title")[0].innerHTML;
 
-    var rightColumn = document.getElementById("right-column");
-    rightColumn.style.opacity = 1;
+    r.style.opacity = 1;
 }

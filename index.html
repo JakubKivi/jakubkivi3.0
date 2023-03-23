@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav ml-auto mr-auto ">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Start</a>
+                    <a class="nav-link text-uppercase active" href="#">Start</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link text-uppercase" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link text-uppercase" href="#">Portfolio</a>
                 </li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
                         <div class="d-flex justify-content-center starting-right-div">
                             <div class="align-self-center justify-content-center ">
                                 
-                                <img src="assets/Me.jpg" class=" img-me" alt="Responsive image">
+                                <img src="assets/Me.jpg" class="img-me" alt="Responsive image">
                             </div>
                         </div>
                     </div> 
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="about-col">
-                        <div class="box">
+                        <div class="box box-left">
                             <div class="container">
                                 <div class="row">
                                     <div class="col ml-auto">
@@ -156,6 +156,10 @@
                             
                             <p class="portfolio-text"  id="portfolio-text">
                                 CałkaBots are minisumo robots created by me and my friend Jakub Delicat. The first one, CałkaBot 1.0 was made in 2018 for miniSUMO competition in UTP in Bydgoszcz. We were first grade students then, and we weren't experienced enough, so it was a huge surprise when we got to a semifinal group. The second one, CałkaBot 2.0, was made the following year and won a special prize in Bydgoszcz. We have been appreciated for the progress and for a PCB board project made by Deli. With both robots, improved to versions 1.1 and 2.1, we have gone to Baltic Robo Battles, to face up univeristy students. We weren't surprised when we have lost most of the battles, but CałkaBots were hard opponent many times. We have even managed to win some of the battles against students of technical universities. 
+                                <br></br>
+                                Naszego drugiego robota mini sumo zdecydowaliśmy się nazwać CałkaBot 2.0 aby uhonorować jego poprzednika. Tym razem zdecydowaliśmy się stworzyć własną płytkę PCB, co zrobił Deli. Nie zmieniliśmy silników, czujników zbliżeniowych i ramy. Zdecydowaliśmy się jednak zmienić czujniki podłoża, co okazało się być złą decyzją (CNY70 były znacznie lepsze). Większość rzeczy, było znów zasponsorowane przez szkołę. Tym razem, jako, że zauważyliśmy, że CałkaBot 1.0 był zbyt lekki, dołożyliśmmy ołowiu na górę robota, jako dodatkowe obciążenie. Nasz robot ważył dokładnie 500g (to jest maksymalna waga dla robotów mini sumo). Po kilku walkach między Całkabotami, zrozumieliśmy, że ten nowy jest o wiele silniejszy.
+                                <br></br>
+                                Podczas zawodów w Bydgoszczy, natknęliśmy się na nieprzyjemny problem. Mówiąc krótko, kiedy nasz robot został zbyt mocno uderzony podskakiwał, przez co myślał, że przeciwnik jest za nim (błąd podczas mocowania czujników), więc sam wyjeżdżał za ring, przez co przegrał kilka walk. Nie udało nam się wyjść z grupy, ale nasze starania zostały docenione przez głównego sponsora zawdodów, więc wygraliśmy nagrodę specjalną. CałkaBot 2.0 wałczył bardzo dobrze w niektórych walkach więc zdecydowaliśmy się ulepszyć, i jego, i CałkaBot 1.0 i pojechać na Bałtyckie Bitwy Robotów. Tam poznaliśmy wielu nowych ludzi i zdobyliśmy mase doświadczenia. Starliśmy się także z studentami z politechnik i czasem udało nam się z nimi wygrać. Z taką ilością nowej wiedzy zdecydowaliśmy się nie budować kolejnego robota, a dwa roboty, tak aby mogły walczyć między sobą, a my widzieć dokładnie ich słabe aspekty (walka między nowym a starym CałkaBotem była mało obiektywna, bo nowy zawsze wygrywał i wydawał się lepszy).  
                             </p>
                         </div>
                     </div>
@@ -170,43 +174,44 @@
         
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content"  id="modal-1">
                 <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">CałkaBots</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                    <div class="modal-title ml-auto">CałkaBots</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        &#xd7;
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="">
                         <div class="img-container">
                             <a href="assets/portfolio/calk/1.jpg">
-                                <img src="assets/portfolio/calk/1.jpg" alt="error">
+                                <img class="img-fluid" src="assets/portfolio/calk/1.jpg" alt="error">
                             </a>
                         </div>
-                        
-                        
                         <p class="portfolio-text">
                             CałkaBots are minisumo robots created by me and my friend Jakub Delicat. The first one, CałkaBot 1.0 was made in 2018 for miniSUMO competition in UTP in Bydgoszcz. We were first grade students then, and we weren't experienced enough, so it was a huge surprise when we got to a semifinal group. The second one, CałkaBot 2.0, was made the following year and won a special prize in Bydgoszcz. We have been appreciated for the progress and for a PCB board project made by Deli. With both robots, improved to versions 1.1 and 2.1, we have gone to Baltic Robo Battles, to face up univeristy students. We weren't surprised when we have lost most of the battles, but CałkaBots were hard opponent many times. We have even managed to win some of the battles against students of technical universities. 
+                            <br><br>
+                            Naszego drugiego robota mini sumo zdecydowaliśmy się nazwać CałkaBot 2.0 aby uhonorować jego poprzednika. Tym razem zdecydowaliśmy się stworzyć własną płytkę PCB, co zrobił Deli. Nie zmieniliśmy silników, czujników zbliżeniowych i ramy. Zdecydowaliśmy się jednak zmienić czujniki podłoża, co okazało się być złą decyzją (CNY70 były znacznie lepsze). Większość rzeczy, było znów zasponsorowane przez szkołę. Tym razem, jako, że zauważyliśmy, że CałkaBot 1.0 był zbyt lekki, dołożyliśmmy ołowiu na górę robota, jako dodatkowe obciążenie. Nasz robot ważył dokładnie 500g (to jest maksymalna waga dla robotów mini sumo). Po kilku walkach między Całkabotami, zrozumieliśmy, że ten nowy jest o wiele silniejszy.
+                            <br><br>
+                            Podczas zawodów w Bydgoszczy, natknęliśmy się na nieprzyjemny problem. Mówiąc krótko, kiedy nasz robot został zbyt mocno uderzony podskakiwał, przez co myślał, że przeciwnik jest za nim (błąd podczas mocowania czujników), więc sam wyjeżdżał za ring, przez co przegrał kilka walk. Nie udało nam się wyjść z grupy, ale nasze starania zostały docenione przez głównego sponsora zawdodów, więc wygraliśmy nagrodę specjalną. CałkaBot 2.0 wałczył bardzo dobrze w niektórych walkach więc zdecydowaliśmy się ulepszyć, i jego, i CałkaBot 1.0 i pojechać na Bałtyckie Bitwy Robotów. Tam poznaliśmy wielu nowych ludzi i zdobyliśmy mase doświadczenia. Starliśmy się także z studentami z politechnik i czasem udało nam się z nimi wygrać. Z taką ilością nowej wiedzy zdecydowaliśmy się nie budować kolejnego robota, a dwa roboty, tak aby mogły walczyć między sobą, a my widzieć dokładnie ich słabe aspekty (walka między nowym a starym CałkaBotem była mało obiektywna, bo nowy zawsze wygrywał i wydawał się lepszy). 
                         </p>
                     </div>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
             </div>
         </div>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+        <button type="button" class="btn btn-primary mr-auto ml-auto" data-toggle="modal" data-target="#exampleModal2">
             Launch demo modal2
         </button>
         
         <!-- Modal -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content" id="modal-2">
                 <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">ARA</h5>
@@ -228,8 +233,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
             </div>
@@ -239,6 +243,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
+        <script src="js/colors.js"></script> 
         <script src="js/typing.js"></script> 
         <script src="js/portfolio.js"></script> 
     </body>

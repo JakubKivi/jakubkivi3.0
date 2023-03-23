@@ -1,37 +1,45 @@
-$bg: #111e;
-$nav: #111;
-$font-shadow: #9435125c;
-$font: #c55c11e6;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
-$fonr-portfolio: rgb(255, 206, 183);
+$nav: #110505;
+$font-shadow: #c04d00be;
+$font: #ef883fda;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
+
+$font-portfolio: rgba(255, 159, 104, 0.478);
 
 $start-bg-1: #110505;
 $start-bg-2: #331111;
 
-$notes-bg-1: $start-bg-2;
+$notes-bg-1: $start-bg-1;
 $notes-bg-2: $start-bg-2;
-$note: #c55c11b2;
-$note-active: #9435125c;
-$note-shadow: #c55c11e0;
+$note: #c04d0084;
+$note-active: #c04d00cf;
+$note-shadow: $font-shadow;
 $note-border: $note;
 $note-hover-time: 0.3s;
 
+$modal-bg: $start-bg-2;
+$modal-border: #c55c11;
+$modal-shadow: $font-shadow;
+
+$image-shadow: $nav;
 
 @use "sass:string";
-
-
-body{
-    background-color: $bg;
-}
 
 nav{
     background-color: $nav;
     a{
+        transition: 0.4s;
+        color: $font-shadow;
+        // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+        // font-weight: bold;
+        &:hover{
+            transition: 0.4s;
+            color: $font;
+            text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+        }
+    }
+    
+    .active{
         color: $font;
         text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
-        font-weight: bold;
-        &:hover{
-            color: $font-shadow;
-        }
     }
 
     span.navbar-toggler-icon{
@@ -40,15 +48,15 @@ nav{
     
 
     .navbar-toggler{
-        border: 2px solid $font;
-        box-shadow: -2px 2px 4px 3px $font-shadow;
-        i{
+        // border: 2px solid $font;
+        box-shadow: 0px 0px 4px 3px $font-shadow;
+        i{ //todo jeden pod drugim po kliknięciu
             color: $font;
-            text-shadow: -2px 2px 3px $font-shadow, -2px 2px 3px $font-shadow;
+            text-shadow: 0px 0px 3px $font-shadow, 0px 0px 3px $font-shadow;
         }
     }
     
-    box-shadow: -2px 2px 5px 3px $font-shadow;
+    box-shadow: 0px 2px 5px 3px $font-shadow;
 }
 .start{
     height: 100%;
@@ -66,7 +74,7 @@ nav{
         text-align: center;
         text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
         .first-line{
-            font-weight: bold;
+            font-weight: bolder;
             font-size: 2.5vw;
             text{
                 font-size: 3vw;
@@ -79,7 +87,7 @@ nav{
             }
         }
         .second-line{
-            font-weight: bold;
+            // font-weight: bold;
             font-size: 2vw;
             @media only screen and (max-width: 769px) {
                 font-size: 3.5vh;
@@ -112,8 +120,9 @@ nav{
             .img-me{
                 max-width: 100%;
                 border-radius: 0.2vw;
-                box-shadow: -2px 2px 4px 1px $font-shadow;
+                box-shadow: 0px 0px 6px 2px $image-shadow;
                 max-height: 60vh;
+                transform: scaleX(-1);
                 @media only screen and (max-width: 769px) {
                 max-height: 40vh;
                 margin-top: 10vh;
@@ -127,15 +136,15 @@ nav{
 }
 
 .divider-neon{
-    height: 0.1rem;
+    // height: 0.1rem;
     width: auto;
-    box-shadow: 0 2px 5px 5px $font-shadow;  //todo shadow w dół
+    box-shadow: 0px -2px 5px 3px $font-shadow;  //todo shadow w dół
     background-color: $font;
 
 }
 
 
-.about{
+.about{//todo weź tam podziel na po równo
     width: 100%;
     background-color: $start-bg-1;
     .row{
@@ -147,14 +156,16 @@ nav{
         .box{
             padding: 1rem;
 
-            width: 92%;
+            width: 93%;
             margin-left: 5vw;
-            background-image: linear-gradient($notes-bg-2, $notes-bg-1);
-            border: solid 0.3vw $font;
+            background-image: linear-gradient(225deg, $notes-bg-2, $notes-bg-1);
+            // border: solid 0.3vw $font;
             border-radius: 0.5rem;
-            box-shadow: -3px 3px 4px 2px $font-shadow;
+            box-shadow: 0px 0px 7px 3px $font-shadow;
+            box-shadow: inset 0px 0px 7px 3px $font-shadow;
 
             .portfolio-text-header{
+                margin-bottom: 0.4rem;
                 text-align: center;
                 color: $font;
                 font-weight: bold;
@@ -177,19 +188,19 @@ nav{
                 padding: 0.6rem !important;
                 .active{
                     background-color: $note-active;  
-                    box-shadow: 0 0 2px 2px $note-active;
+                    box-shadow: 0 0 4px 3px $note-active;
                 }
             }
-            .box-box  div{
+            .box-box  div{  //todo tu jest krzywo, obrzydliwe ~baba
                 background-color: $note;  
                 padding: 0vw;
-                box-shadow: 0 0 4px 0.3px $note-shadow;
+                box-shadow: 0 0 4px 3px $image-shadow;
                 transition: $note-hover-time ease-in-out;
                 border-radius: 0.4rem;
                 &:hover{
-                    background-color: $font-shadow;  
-                    box-shadow: 0 0 0px 0px $font-shadow;
-                    transition: $note-hover-time ease-in-out;
+                    background-color: $note-active;  
+                    box-shadow: 0 0 4px 3px $note-active;
+                    transition: $note-hover-time linear;
                     cursor: pointer;
                 }
                 img{
@@ -200,25 +211,36 @@ nav{
                 }
             }
         }
+
+
+        .right-box{
+            background-image: linear-gradient(135deg, $notes-bg-2, $notes-bg-1);
+        }
         .right-box{
             transition: opacity .4s linear;
             margin-left: 3vw;
             margin-right: 0;
             display: block;
+            padding-left: 2rem;
+            padding-right: 2rem;
             @media only screen and (max-width: 769px) {
                 display: none;
             }
             img{
                 margin-top: 0.6rem;
                 float: left;
-                width: 30vh;
-                margin-right: 0.5rem;
+                max-width: 20rem;
+                max-height: 15rem;
+                margin-right: 2rem;
+                margin-bottom: 1rem;
+                border-radius: 3px;
+                box-shadow: 0px 0px 15px 6px $image-shadow;
             }
             
             .portfolio-text{
                 margin-top: 0.2rem;
                 text-align: justify;
-                color: $fonr-portfolio;
+                color: $font-portfolio;
                 font-size: 1rem;
                 // float: left;
                 width: 100%;
@@ -228,21 +250,90 @@ nav{
     }
 }
 
+
 .modal{
-    img{
-        margin-top: 0.6rem;
-        float: left;
-        width: 30vh;
-        margin-right: 0.5rem;
-    }
     
-    .portfolio-text{
-        margin-top: 0.2rem;
-        text-align: justify;
-        color: $fonr-portfolio;
-        font-size: 1rem;
-        // float: left;
-        width: 100%;
-        // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+    // filter: blur(8px); //todo 
+    background-image: linear-gradient(#0000001d, #0000002d);
+
+    .modal-lg{
+        max-width: 90% !important;
     }
+    // background-color: $bg;
+    .modal-content{
+        background-image: linear-gradient(to top, $start-bg-1, $start-bg-2);
+        // border: $font 0.2rem solid;
+        box-shadow: inset 0px 0px 8px 4px $modal-shadow;
+        .modal-header{
+            text-align: center;
+            color: $font;
+            font-weight: bolder !important;
+            font-size: 1.4rem;
+            text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+            border-bottom: $font 0rem solid;
+             box-shadow: inset 0px 0px 2px 1px $font-shadow;
+        }
+        .close{
+            opacity: 1;
+            transition: opacity .5s;
+            color: $font-shadow;
+            font-weight: bolder !important;
+            font-size: 1.4rem;
+            box-shadow: 0px 0px 10px 2px $font-shadow;
+            height: 100%; //todo jak close ma wyglądać
+            // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+            
+            &:hover{
+                transition: .5s;
+                opacity: .6;
+            }
+        }
+        img{
+            margin-top: 1rem;
+            margin-right: 2rem;
+            border-radius: 3px;
+            box-shadow: 0px 0px 15px 6px $image-shadow;
+            float: left;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            max-width: 20rem;
+            max-height: 20rem;
+        }
+
+        .modal-body{
+            box-shadow: inset 0px 0px 2px 1px $font-shadow;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+        
+        .portfolio-text{
+            margin-top: 0.2rem;
+            text-align: justify;
+            color: $font-portfolio;
+            font-size: 1rem;
+            // float: left;
+            width: 100%;
+            // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+        }
+
+        .modal-footer{
+            border-top: $font 0rem solid;
+            box-shadow: inset 0px 0px 2px 1px $font-shadow;
+            justify-content: center;
+            button{
+                background-color: #fff0;
+                border:none;
+                box-shadow: 0px 0px 10px 2px $font-shadow;
+                color: $font-shadow;
+                font-weight: bold;
+                padding: 0.1rem 0.4rem 0.3rem 0.4rem;
+                transition: opacity .5s;
+                &:hover{
+                    color: $font;
+                    transition: .5s;  //todotime "zaświecać tak bzyt bzyt" ~asia
+                }
+            }
+        }
+    }
+        
 }

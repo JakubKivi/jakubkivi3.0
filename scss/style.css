@@ -1,29 +1,29 @@
-body {
-  background-color: rgba(17, 17, 17, 0.9333333333);
-}
-
 nav {
-  background-color: #111;
-  box-shadow: -2px 2px 5px 3px rgba(148, 53, 18, 0.3607843137);
+  background-color: #110505;
+  box-shadow: 0px 2px 5px 3px rgba(192, 77, 0, 0.7450980392);
 }
 nav a {
-  color: rgba(197, 92, 17, 0.9019607843);
-  text-shadow: 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137);
-  font-weight: bold;
+  transition: 0.4s;
+  color: rgba(192, 77, 0, 0.7450980392);
 }
 nav a:hover {
-  color: rgba(148, 53, 18, 0.3607843137);
+  transition: 0.4s;
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+}
+nav .active {
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
 nav span.navbar-toggler-icon {
-  color: rgba(197, 92, 17, 0.9019607843);
+  color: rgba(239, 136, 63, 0.8549019608);
 }
 nav .navbar-toggler {
-  border: 2px solid rgba(197, 92, 17, 0.9019607843);
-  box-shadow: -2px 2px 4px 3px rgba(148, 53, 18, 0.3607843137);
+  box-shadow: 0px 0px 4px 3px rgba(192, 77, 0, 0.7450980392);
 }
 nav .navbar-toggler i {
-  color: rgba(197, 92, 17, 0.9019607843);
-  text-shadow: -2px 2px 3px rgba(148, 53, 18, 0.3607843137), -2px 2px 3px rgba(148, 53, 18, 0.3607843137);
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0px 0px 3px rgba(192, 77, 0, 0.7450980392), 0px 0px 3px rgba(192, 77, 0, 0.7450980392);
 }
 
 .start {
@@ -38,9 +38,9 @@ nav .navbar-toggler i {
 }
 .start .starting-left-div {
   height: 100vh;
-  color: rgba(197, 92, 17, 0.9019607843);
+  color: rgba(239, 136, 63, 0.8549019608);
   text-align: center;
-  text-shadow: 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
 @media only screen and (max-width: 769px) {
   .start .starting-left-div {
@@ -48,7 +48,7 @@ nav .navbar-toggler i {
   }
 }
 .start .starting-left-div .first-line {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 2.5vw;
 }
 .start .starting-left-div .first-line text {
@@ -63,7 +63,6 @@ nav .navbar-toggler i {
   }
 }
 .start .starting-left-div .second-line {
-  font-weight: bold;
   font-size: 2vw;
 }
 @media only screen and (max-width: 769px) {
@@ -101,8 +100,9 @@ nav .navbar-toggler i {
 .start .starting-right-div div .img-me {
   max-width: 100%;
   border-radius: 0.2vw;
-  box-shadow: -2px 2px 4px 1px rgba(148, 53, 18, 0.3607843137);
+  box-shadow: 0px 0px 6px 2px #110505;
   max-height: 60vh;
+  transform: scaleX(-1);
 }
 @media only screen and (max-width: 769px) {
   .start .starting-right-div div .img-me {
@@ -117,10 +117,9 @@ nav .navbar-toggler i {
 }
 
 .divider-neon {
-  height: 0.1rem;
   width: auto;
-  box-shadow: 0 2px 5px 5px rgba(148, 53, 18, 0.3607843137);
-  background-color: rgba(197, 92, 17, 0.9019607843);
+  box-shadow: 0px -2px 5px 3px rgba(192, 77, 0, 0.7450980392);
+  background-color: rgba(239, 136, 63, 0.8549019608);
 }
 
 .about {
@@ -136,26 +135,27 @@ nav .navbar-toggler i {
 }
 .about .about-col .box {
   padding: 1rem;
-  width: 92%;
+  width: 93%;
   margin-left: 5vw;
-  background-image: linear-gradient(#331111, #331111);
-  border: solid 0.3vw rgba(197, 92, 17, 0.9019607843);
+  background-image: linear-gradient(225deg, #331111, #110505);
   border-radius: 0.5rem;
-  box-shadow: -3px 3px 4px 2px rgba(148, 53, 18, 0.3607843137);
+  box-shadow: 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
+  box-shadow: inset 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
 }
 .about .about-col .box .portfolio-text-header {
+  margin-bottom: 0.4rem;
   text-align: center;
-  color: rgba(197, 92, 17, 0.9019607843);
+  color: rgba(239, 136, 63, 0.8549019608);
   font-weight: bold;
   font-size: 1.4rem;
-  text-shadow: 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137), 0px 0px 4px rgba(148, 53, 18, 0.3607843137);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
 .about .about-col .box .row {
   margin-bottom: 0;
 }
 @keyframes note-shadow-on-animation {
   50% {
-    box-shadow: 0 0 4px 0.3px rgba(197, 92, 17, 0.8784313725);
+    box-shadow: 0 0 4px 0.3px rgba(192, 77, 0, 0.7450980392);
   }
 }
 @keyframes note-shadow-off-animation {
@@ -168,20 +168,20 @@ nav .navbar-toggler i {
   padding: 0.6rem !important;
 }
 .about .about-col .box .box-box .active {
-  background-color: rgba(148, 53, 18, 0.3607843137);
-  box-shadow: 0 0 2px 2px rgba(148, 53, 18, 0.3607843137);
+  background-color: rgba(192, 77, 0, 0.8117647059);
+  box-shadow: 0 0 4px 3px rgba(192, 77, 0, 0.8117647059);
 }
 .about .about-col .box .box-box div {
-  background-color: rgba(197, 92, 17, 0.6980392157);
+  background-color: rgba(192, 77, 0, 0.5176470588);
   padding: 0vw;
-  box-shadow: 0 0 4px 0.3px rgba(197, 92, 17, 0.8784313725);
+  box-shadow: 0 0 4px 3px #110505;
   transition: 0.3s ease-in-out;
   border-radius: 0.4rem;
 }
 .about .about-col .box .box-box div:hover {
-  background-color: rgba(148, 53, 18, 0.3607843137);
-  box-shadow: 0 0 0px 0px rgba(148, 53, 18, 0.3607843137);
-  transition: 0.3s ease-in-out;
+  background-color: rgba(192, 77, 0, 0.8117647059);
+  box-shadow: 0 0 4px 3px rgba(192, 77, 0, 0.8117647059);
+  transition: 0.3s linear;
   cursor: pointer;
 }
 .about .about-col .box .box-box div img {
@@ -190,10 +190,15 @@ nav .navbar-toggler i {
   max-height: 100%;
 }
 .about .about-col .right-box {
+  background-image: linear-gradient(135deg, #331111, #110505);
+}
+.about .about-col .right-box {
   transition: opacity 0.4s linear;
   margin-left: 3vw;
   margin-right: 0;
   display: block;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 @media only screen and (max-width: 769px) {
   .about .about-col .right-box {
@@ -203,27 +208,91 @@ nav .navbar-toggler i {
 .about .about-col .right-box img {
   margin-top: 0.6rem;
   float: left;
-  width: 30vh;
-  margin-right: 0.5rem;
+  max-width: 20rem;
+  max-height: 15rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px 6px #110505;
 }
 .about .about-col .right-box .portfolio-text {
   margin-top: 0.2rem;
   text-align: justify;
-  color: rgb(255, 206, 183);
+  color: rgba(255, 159, 104, 0.478);
   font-size: 1rem;
   width: 100%;
 }
 
-.modal img {
-  margin-top: 0.6rem;
-  float: left;
-  width: 30vh;
-  margin-right: 0.5rem;
+.modal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1137254902), rgba(0, 0, 0, 0.1764705882));
 }
-.modal .portfolio-text {
+.modal .modal-lg {
+  max-width: 90% !important;
+}
+.modal .modal-content {
+  background-image: linear-gradient(to top, #110505, #331111);
+  box-shadow: inset 0px 0px 8px 4px rgba(192, 77, 0, 0.7450980392);
+}
+.modal .modal-content .modal-header {
+  text-align: center;
+  color: rgba(239, 136, 63, 0.8549019608);
+  font-weight: bolder !important;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  border-bottom: rgba(239, 136, 63, 0.8549019608) 0rem solid;
+  box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
+}
+.modal .modal-content .close {
+  opacity: 1;
+  transition: opacity 0.5s;
+  color: rgba(192, 77, 0, 0.7450980392);
+  font-weight: bolder !important;
+  font-size: 1.4rem;
+  box-shadow: 0px 0px 10px 2px rgba(192, 77, 0, 0.7450980392);
+  height: 100%;
+}
+.modal .modal-content .close:hover {
+  transition: 0.5s;
+  opacity: 0.6;
+}
+.modal .modal-content img {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px 6px #110505;
+  float: left;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 20rem;
+  max-height: 20rem;
+}
+.modal .modal-content .modal-body {
+  box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.modal .modal-content .portfolio-text {
   margin-top: 0.2rem;
   text-align: justify;
-  color: rgb(255, 206, 183);
+  color: rgba(255, 159, 104, 0.478);
   font-size: 1rem;
   width: 100%;
+}
+.modal .modal-content .modal-footer {
+  border-top: rgba(239, 136, 63, 0.8549019608) 0rem solid;
+  box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
+  justify-content: center;
+}
+.modal .modal-content .modal-footer button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  box-shadow: 0px 0px 10px 2px rgba(192, 77, 0, 0.7450980392);
+  color: rgba(192, 77, 0, 0.7450980392);
+  font-weight: bold;
+  padding: 0.1rem 0.4rem 0.3rem 0.4rem;
+  transition: opacity 0.5s;
+}
+.modal .modal-content .modal-footer button:hover {
+  color: rgba(239, 136, 63, 0.8549019608);
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */
