@@ -74,7 +74,18 @@
 
         <div class="about">
             <div class="about-left">
+                <div class="about-text-header">
+                    About me
+                </div>
+                <div class="about-text" id="about-text">
 
+                </div>
+                <div onclick="rArrow()" class="arrow">
+                    &#x27AA;
+                </div>
+                <div onclick="lArrow()" class="arrow arrow-left">
+                    &#x27AA;
+                 </div>
             </div>
             <div class="about-right">
                 <div class="about-text-header">
@@ -100,13 +111,13 @@
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/jakubkivi/" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.instagram.com/jakub_kivi/" target="_blank">
-                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a>
                     <a href="https://github.com/JakubKivi" target="_blank">
-                        <i class="fa-brands fa-square-github"></i>
+                        <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
                 <div class="data-line-header">
@@ -119,8 +130,8 @@
         </div>
 
         <div class="portfolio">
-            <div class="row row-custom">
-                <div class="col-md-5">
+            <div class="row-custom">
+                <div class="portfolio-col-left">
                     <div class="portfolio-col">
                         <div class="box box-left">
                             <div class="container">
@@ -185,24 +196,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-col col-md-7">
-                    <div class="box right-box" id="right-column">
-                        <div class="row ml-auto mr-auto w-100">
-                            <div class="portfolio-text-header ml-auto mr-auto" id="portfolio-title">
-                                <!-- javascript will place content here -->
-                            </div>
-                        </div>
-                        <div class="">
-                            <div class="img-container"  id="portfolio-image">
-                                <a href="assets/portfolio/calk/1.jpg">
+                <div class="portfolio-col-right">
+                    <div class="portfolio-col">
+                        <div class="box right-box" id="right-column">
+                            <div class="row ml-auto mr-auto w-100">
+                                <div class="portfolio-text-header ml-auto mr-auto" id="portfolio-title">
                                     <!-- javascript will place content here -->
-                                </a>
+                                </div>
                             </div>
-                            
-                            
-                            <p class="portfolio-text"  id="portfolio-text">
-                                <!-- javascript will place content here -->
-                            </p>
+                            <div class="">
+                                <div class="img-container"  id="portfolio-image">
+                                    <a href="assets/portfolio/calk/1.jpg">
+                                        <!-- javascript will place content here -->
+                                    </a>
+                                </div>
+                                
+                                
+                                <p class="portfolio-text"  id="portfolio-text">
+                                    <!-- javascript will place content here -->
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -280,5 +293,7 @@
         <script src="js/typing.js"></script> 
         <script src="js/portfolio.js"></script> 
         <script src="js/onLoad.js"></script> 
+        <script src="js/aboutText.js"></script> 
+        <script src="js/aboutTextScript.js"></script> 
     </body>
 </html>

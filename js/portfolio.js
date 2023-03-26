@@ -36,7 +36,6 @@ async function onSelectorClicked(element){
 
 function ChangePortfolioContent(a, r){
     var myModal = document.getElementById("modal-"+a);
-    console.log(width);
     document.getElementById("portfolio-text").innerHTML = 
     myModal.getElementsByClassName("portfolio-text")[0].innerHTML.slice(0, 900 *width/1536) + "... " +
     "<a href=\"\" data-toggle=\"modal\" data-target=\"#portfolio-modal-"+a+"\">Read more. </a>";
