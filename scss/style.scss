@@ -3,6 +3,7 @@ $font-shadow: #c04d00be;
 $font: #ef883fda;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
 
 $font-portfolio: rgba(255, 159, 104, 0.478);
+$a-portfolio: #c04d00f2;
 
 $start-bg-1: #110505;
 $start-bg-2: #331111;
@@ -16,10 +17,9 @@ $note-border: $note;
 $note-hover-time: 0.3s;
 
 $modal-bg: $start-bg-2;
-$modal-border: #c55c11;
 $modal-shadow: $font-shadow;
 
-$image-shadow: $nav;
+$image-shadow: #110505b2;
 
 @use "sass:string";
 
@@ -143,25 +143,101 @@ nav{
 
 }
 
+.about{
+    height: 80vh;
+    background-color: $start-bg-1;
+    padding-top: 10vh;
+    display: flex;
+    .about-left{
+        margin-left: 5vw;
+        width: 59vw;
+        height: 100%;
+        background-image: linear-gradient(to bottom, $start-bg-2, $start-bg-1);
+        box-shadow: inset 0px 0px 7px 3px $font-shadow;
+        border-radius: .5rem;
+        @media only screen and (max-width: 769px) {
+            display: none;
+        }
+    }
+    .about-right{
+        margin-left: 2vw;
+        width: 29vw;
+        height: 100%;
+        background-image: linear-gradient(to bottom, $start-bg-2, $start-bg-1);
+        box-shadow: inset 0px 0px 7px 3px $font-shadow;
+        border-radius: .5rem;
+        padding: 1rem;
+        @media only screen and (max-width: 769px) {
+            margin-left: 5vw;
+            width: 90vw;
+        }
 
-.about{//todo weź tam podziel na po równo
+        .about-text-header{
+            margin-bottom: 0.8rem;
+            text-align: center;
+            color: $font;
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+        }
+        .data-line-header{ 
+            text-align: center;
+            color: $font-portfolio;
+            font-weight: bold;
+            font-size: 1.1rem;
+            // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+        }
+        .data-line{
+            margin-bottom: 0.4rem;
+            text-align: center;
+            // font-weight: bold;
+            font-size: 1rem;
+            a{
+                color: $font-shadow;
+                transition: .5s;
+                &:hover{
+                    color: $font;
+                    text-shadow: 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+                    transition: .5s;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                i{
+                    margin-top: 0.5rem;
+                    margin-right: 0.3rem;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+
+.portfolio{//todo weź tam podziel na po równo
     width: 100%;
     background-color: $start-bg-1;
+    .row-custom{
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
     .row{
         margin-right: 0;
+        margin-left: 0;
     }
-    .about-col{
+    .portfolio-col{
         padding-top: 10vh;
         padding-bottom: 10vh;
+        padding-right: 2vw;
         .box{
             padding: 1rem;
 
-            width: 93%;
-            margin-left: 5vw;
+            // width: 70%;
+            // margin-left: 5vw;
             background-image: linear-gradient(225deg, $notes-bg-2, $notes-bg-1);
             // border: solid 0.3vw $font;
             border-radius: 0.5rem;
-            box-shadow: 0px 0px 7px 3px $font-shadow;
             box-shadow: inset 0px 0px 7px 3px $font-shadow;
 
             .portfolio-text-header{
@@ -175,7 +251,9 @@ nav{
 
             .row{
                 margin-bottom: 0;
+                margin-left: 0;
             }
+            
             @keyframes note-shadow-on-animation{
                 50% {box-shadow: 0 0 4px 0.3px $note-shadow;}
             }
@@ -191,7 +269,7 @@ nav{
                     box-shadow: 0 0 4px 3px $note-active;
                 }
             }
-            .box-box  div{  //todo tu jest krzywo, obrzydliwe ~baba
+            .box-box  div{  
                 background-color: $note;  
                 padding: 0vw;
                 box-shadow: 0 0 4px 3px $image-shadow;
@@ -211,14 +289,16 @@ nav{
                 }
             }
         }
-
+        .box-left{
+            padding-bottom: 2rem;
+        }
 
         .right-box{
             background-image: linear-gradient(135deg, $notes-bg-2, $notes-bg-1);
         }
         .right-box{
             transition: opacity .4s linear;
-            margin-left: 3vw;
+            // margin-left: 3vw;
             margin-right: 0;
             display: block;
             padding-left: 2rem;
@@ -244,6 +324,17 @@ nav{
                 font-size: 1rem;
                 // float: left;
                 width: 100%;
+                a{
+                    color: $a-portfolio;
+                    transition: .5s;
+                    &:hover{
+                        opacity: 1;
+                        color: $font;
+                        text-shadow: 0 0 3px $font-shadow;
+                        transition: .5s;
+                        text-decoration: none;
+                    }
+                }
                 // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             }
         }
@@ -278,15 +369,31 @@ nav{
             transition: opacity .5s;
             color: $font-shadow;
             font-weight: bolder !important;
-            font-size: 1.4rem;
-            box-shadow: 0px 0px 10px 2px $font-shadow;
+            text-shadow: none;
+            font-size: 1.8rem;
+            // margin-right: 0px;
+            // margin-top: 0px;
             height: 100%; //todo jak close ma wyglądać
             // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
-            
-            &:hover{
-                transition: .5s;
-                opacity: .6;
+            span{
+                background-color: #fff0;
+                border:none;
+                color: $font-shadow;
+                box-shadow: 0px 0px 10px 2px $font-shadow;
+                &:hover{
+                    opacity: 1;
+                    color: $font;
+                    transition: .5s;
+                }
             }
+            transition: .5s;
+            &:hover{
+                opacity: 1;
+                color: $font;
+                transition: .5s;
+                text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+            }
+            
         }
         img{
             margin-top: 1rem;
@@ -336,4 +443,16 @@ nav{
         }
     }
         
+}
+
+.clickable-icon-neon{
+    color: $font-shadow;
+    text-shadow: none;
+    box-shadow: 0px 0px 10px 2px $image-shadow;
+    transition: .5s;
+    &:hover{
+        color: $font;
+        transition: .5s;
+        text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+    }
 }

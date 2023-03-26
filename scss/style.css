@@ -100,7 +100,7 @@ nav .navbar-toggler i {
 .start .starting-right-div div .img-me {
   max-width: 100%;
   border-radius: 0.2vw;
-  box-shadow: 0px 0px 6px 2px #110505;
+  box-shadow: 0px 0px 6px 2px rgba(17, 5, 5, 0.6980392157);
   max-height: 60vh;
   transform: scaleX(-1);
 }
@@ -123,26 +123,101 @@ nav .navbar-toggler i {
 }
 
 .about {
+  height: 80vh;
+  background-color: #110505;
+  padding-top: 10vh;
+  display: flex;
+}
+.about .about-left {
+  margin-left: 5vw;
+  width: 59vw;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #331111, #110505);
+  box-shadow: inset 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 769px) {
+  .about .about-left {
+    display: none;
+  }
+}
+.about .about-right {
+  margin-left: 2vw;
+  width: 29vw;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #331111, #110505);
+  box-shadow: inset 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+@media only screen and (max-width: 769px) {
+  .about .about-right {
+    margin-left: 5vw;
+    width: 90vw;
+  }
+}
+.about .about-right .about-text-header {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  color: rgba(239, 136, 63, 0.8549019608);
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+}
+.about .about-right .data-line-header {
+  text-align: center;
+  color: rgba(255, 159, 104, 0.478);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.about .about-right .data-line {
+  margin-bottom: 0.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.about .about-right .data-line a {
+  color: rgba(192, 77, 0, 0.7450980392);
+  transition: 0.5s;
+}
+.about .about-right .data-line a:hover {
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  transition: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.about .about-right .data-line a i {
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
+  font-size: 1.6rem;
+}
+
+.portfolio {
   width: 100%;
   background-color: #110505;
 }
-.about .row {
+.portfolio .row-custom {
   margin-right: 0;
+  margin-left: 0;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
-.about .about-col {
+.portfolio .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.portfolio .portfolio-col {
   padding-top: 10vh;
   padding-bottom: 10vh;
+  padding-right: 2vw;
 }
-.about .about-col .box {
+.portfolio .portfolio-col .box {
   padding: 1rem;
-  width: 93%;
-  margin-left: 5vw;
   background-image: linear-gradient(225deg, #331111, #110505);
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
   box-shadow: inset 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
 }
-.about .about-col .box .portfolio-text-header {
+.portfolio .portfolio-col .box .portfolio-text-header {
   margin-bottom: 0.4rem;
   text-align: center;
   color: rgba(239, 136, 63, 0.8549019608);
@@ -150,8 +225,9 @@ nav .navbar-toggler i {
   font-size: 1.4rem;
   text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
-.about .about-col .box .row {
+.portfolio .portfolio-col .box .row {
   margin-bottom: 0;
+  margin-left: 0;
 }
 @keyframes note-shadow-on-animation {
   50% {
@@ -163,49 +239,51 @@ nav .navbar-toggler i {
     box-shadow: 0 0 4px 1px #110505;
   }
 }
-.about .about-col .box .box-box {
+.portfolio .portfolio-col .box .box-box {
   margin-bottom: 0 !important;
   padding: 0.6rem !important;
 }
-.about .about-col .box .box-box .active {
+.portfolio .portfolio-col .box .box-box .active {
   background-color: rgba(192, 77, 0, 0.8117647059);
   box-shadow: 0 0 4px 3px rgba(192, 77, 0, 0.8117647059);
 }
-.about .about-col .box .box-box div {
+.portfolio .portfolio-col .box .box-box div {
   background-color: rgba(192, 77, 0, 0.5176470588);
   padding: 0vw;
-  box-shadow: 0 0 4px 3px #110505;
+  box-shadow: 0 0 4px 3px rgba(17, 5, 5, 0.6980392157);
   transition: 0.3s ease-in-out;
   border-radius: 0.4rem;
 }
-.about .about-col .box .box-box div:hover {
+.portfolio .portfolio-col .box .box-box div:hover {
   background-color: rgba(192, 77, 0, 0.8117647059);
   box-shadow: 0 0 4px 3px rgba(192, 77, 0, 0.8117647059);
   transition: 0.3s linear;
   cursor: pointer;
 }
-.about .about-col .box .box-box div img {
+.portfolio .portfolio-col .box .box-box div img {
   margin: 0%;
   max-width: 100%;
   max-height: 100%;
 }
-.about .about-col .right-box {
+.portfolio .portfolio-col .box-left {
+  padding-bottom: 2rem;
+}
+.portfolio .portfolio-col .right-box {
   background-image: linear-gradient(135deg, #331111, #110505);
 }
-.about .about-col .right-box {
+.portfolio .portfolio-col .right-box {
   transition: opacity 0.4s linear;
-  margin-left: 3vw;
   margin-right: 0;
   display: block;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 @media only screen and (max-width: 769px) {
-  .about .about-col .right-box {
+  .portfolio .portfolio-col .right-box {
     display: none;
   }
 }
-.about .about-col .right-box img {
+.portfolio .portfolio-col .right-box img {
   margin-top: 0.6rem;
   float: left;
   max-width: 20rem;
@@ -213,14 +291,25 @@ nav .navbar-toggler i {
   margin-right: 2rem;
   margin-bottom: 1rem;
   border-radius: 3px;
-  box-shadow: 0px 0px 15px 6px #110505;
+  box-shadow: 0px 0px 15px 6px rgba(17, 5, 5, 0.6980392157);
 }
-.about .about-col .right-box .portfolio-text {
+.portfolio .portfolio-col .right-box .portfolio-text {
   margin-top: 0.2rem;
   text-align: justify;
   color: rgba(255, 159, 104, 0.478);
   font-size: 1rem;
   width: 100%;
+}
+.portfolio .portfolio-col .right-box .portfolio-text a {
+  color: rgba(192, 77, 0, 0.9490196078);
+  transition: 0.5s;
+}
+.portfolio .portfolio-col .right-box .portfolio-text a:hover {
+  opacity: 1;
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0 0 3px rgba(192, 77, 0, 0.7450980392);
+  transition: 0.5s;
+  text-decoration: none;
 }
 
 .modal {
@@ -247,19 +336,33 @@ nav .navbar-toggler i {
   transition: opacity 0.5s;
   color: rgba(192, 77, 0, 0.7450980392);
   font-weight: bolder !important;
-  font-size: 1.4rem;
-  box-shadow: 0px 0px 10px 2px rgba(192, 77, 0, 0.7450980392);
+  text-shadow: none;
+  font-size: 1.8rem;
   height: 100%;
+  transition: 0.5s;
+}
+.modal .modal-content .close span {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: rgba(192, 77, 0, 0.7450980392);
+  box-shadow: 0px 0px 10px 2px rgba(192, 77, 0, 0.7450980392);
+}
+.modal .modal-content .close span:hover {
+  opacity: 1;
+  color: rgba(239, 136, 63, 0.8549019608);
+  transition: 0.5s;
 }
 .modal .modal-content .close:hover {
+  opacity: 1;
+  color: rgba(239, 136, 63, 0.8549019608);
   transition: 0.5s;
-  opacity: 0.6;
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
 .modal .modal-content img {
   margin-top: 1rem;
   margin-right: 2rem;
   border-radius: 3px;
-  box-shadow: 0px 0px 15px 6px #110505;
+  box-shadow: 0px 0px 15px 6px rgba(17, 5, 5, 0.6980392157);
   float: left;
   margin-bottom: 1.5rem;
   width: 100%;
@@ -295,4 +398,16 @@ nav .navbar-toggler i {
 .modal .modal-content .modal-footer button:hover {
   color: rgba(239, 136, 63, 0.8549019608);
   transition: 0.5s;
+}
+
+.clickable-icon-neon {
+  color: rgba(192, 77, 0, 0.7450980392);
+  text-shadow: none;
+  box-shadow: 0px 0px 10px 2px rgba(17, 5, 5, 0.6980392157);
+  transition: 0.5s;
+}
+.clickable-icon-neon:hover {
+  color: rgba(239, 136, 63, 0.8549019608);
+  transition: 0.5s;
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,4 @@
+onLoad();
+function onLoad(){
+    onSelectorClicked();
+}
