@@ -126,6 +126,7 @@ nav .navbar-toggler i {
   background-color: #110505;
   padding-top: 10vh;
   display: flex;
+  flex-wrap: wrap;
 }
 .about .about-left {
   padding-top: 1rem;
@@ -136,17 +137,25 @@ nav .navbar-toggler i {
   box-shadow: inset 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
   border-radius: 0.5rem;
   position: relative;
+  display: inline-block;
   opacity: 1;
   transition: opacity 0.8s;
 }
 @media only screen and (max-width: 769px) {
   .about .about-left {
-    display: none;
+    width: 90vw;
+    margin-bottom: 10vh;
   }
 }
+.about .about-left .about-img {
+  float: left;
+  max-width: 20rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 .about .about-left .about-text {
-  margin-left: 2vw;
-  margin-right: 2vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
   text-align: justify;
   color: rgba(255, 159, 104, 0.478);
   margin-bottom: 3.5rem;
@@ -154,10 +163,9 @@ nav .navbar-toggler i {
 .about .about-left .arrow {
   color: rgba(192, 77, 0, 0.7450980392);
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0.8rem;
   right: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
   width: 2rem;
   transition: 0.5s;
 }
