@@ -136,6 +136,8 @@ nav .navbar-toggler i {
   box-shadow: inset 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
   border-radius: 0.5rem;
   position: relative;
+  opacity: 1;
+  transition: opacity 0.8s;
 }
 @media only screen and (max-width: 769px) {
   .about .about-left {
@@ -148,12 +150,6 @@ nav .navbar-toggler i {
   text-align: justify;
   color: rgba(255, 159, 104, 0.478);
   margin-bottom: 3.5rem;
-  opacity: 1;
-  transition: 0.5s;
-}
-.about .about-left .hiding {
-  opacity: 0;
-  transition: 0.5s;
 }
 .about .about-left .arrow {
   color: rgba(192, 77, 0, 0.7450980392);
@@ -175,6 +171,10 @@ nav .navbar-toggler i {
 .about .about-left .arrow-left {
   left: 1rem;
   transform: rotate(180deg);
+}
+.about .hiding {
+  opacity: 0;
+  transition: opacity 0.8s;
 }
 .about .about-right {
   margin-left: 2vw;
