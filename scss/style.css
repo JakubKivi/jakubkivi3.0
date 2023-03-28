@@ -371,6 +371,70 @@ nav .navbar-toggler i {
   text-decoration: none;
 }
 
+.contact {
+  background-color: #110505;
+  padding-bottom: 10vh;
+}
+.contact .contact-container {
+  background-image: linear-gradient(#110505, #331111);
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 0px 7px 3px rgba(192, 77, 0, 0.7450980392);
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.contact .contact-container .contact-header {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  color: rgba(239, 136, 63, 0.8549019608);
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+}
+.contact .contact-container label {
+  color: rgba(192, 77, 0, 0.7450980392);
+  width: 100%;
+}
+.contact .contact-container .input-field {
+  background-color: #110505;
+  width: 100%;
+  border: none;
+  color: rgba(255, 159, 104, 0.478);
+  border-radius: 0.2rem;
+  box-shadow: inset 0px 0px 4px 1px rgba(192, 77, 0, 0.7450980392);
+  padding: 0.5rem;
+  outline: none;
+}
+.contact .contact-container .input-field:focus-visible {
+  outline: 1px solid rgba(239, 136, 63, 0.8549019608);
+  box-shadow: 0px 0px 4px 3px rgba(192, 77, 0, 0.7450980392);
+}
+.contact .contact-container .button-container {
+  display: flex;
+  justify-content: center;
+}
+.contact .contact-container .button-container button {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  box-shadow: 0px 0px 10px 2px rgba(192, 77, 0, 0.7450980392);
+  color: rgba(192, 77, 0, 0.7450980392);
+  font-weight: bold;
+  padding: 0.1rem 0.4rem 0.3rem 0.4rem;
+  transition: 0.5s;
+}
+.contact .contact-container .button-container button:hover {
+  color: rgba(239, 136, 63, 0.8549019608);
+  transition: 0.5s;
+}
+
 .modal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1137254902), rgba(0, 0, 0, 0.1764705882));
 }
@@ -452,7 +516,7 @@ nav .navbar-toggler i {
   color: rgba(192, 77, 0, 0.7450980392);
   font-weight: bold;
   padding: 0.1rem 0.4rem 0.3rem 0.4rem;
-  transition: opacity 0.5s;
+  transition: 0.5s;
 }
 .modal .modal-content .modal-footer button:hover {
   color: rgba(239, 136, 63, 0.8549019608);
