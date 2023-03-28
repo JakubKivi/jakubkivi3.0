@@ -67,8 +67,10 @@ nav{
     }
     .starting-left-div{
         height: 100vh; 
+        height: 100svh; 
         @media only screen and (max-width: 769px) {
             height: 40vh; 
+            height: 40svh; 
         }
         color: $font;
         text-align: center;
@@ -81,16 +83,18 @@ nav{
             }
             @media only screen and (max-width: 769px) {
                 font-size: 4vh;
+                font-size: 4svh;
                 text{
                     font-size: 4.5vh;
+                    font-size: 4.5svh;
                 }
             }
         }
         .second-line{
-            // font-weight: bold;
             font-size: 2vw;
             @media only screen and (max-width: 769px) {
                 font-size: 3.5vh;
+                font-size: 3.5svh;
             }
             div{
                 display: inline-block;
@@ -101,6 +105,7 @@ nav{
                 left: -0.5vw;
                 @media only screen and (max-width: 769px) {
                     font-size: 5vh;
+                    font-size: 5svh;
                 }
             }
             .square-blink-off{
@@ -110,42 +115,49 @@ nav{
     }
     .starting-right-div {
         height: 100vh; 
+        height: 100svh; 
         text-align: center;
         @media only screen and (max-width: 769px) {
             margin-top: 5vh;
+            margin-top: 5svh;
             margin-bottom: 5vh;
+            margin-bottom: 5svh;
             height: 50vh; 
+            height: 50svh; 
         }
         div{
             .img-me{
                 max-width: 100%;
-                border-radius: 0.2vw;
+                border-radius: .3rem;
                 box-shadow: 0px 0px 6px 2px $image-shadow;
                 max-height: 60vh;
+                max-height: 60svh;
                 transform: scaleX(-1);
                 @media only screen and (max-width: 769px) {
                 max-height: 40vh;
+                max-height: 40svh;
                 margin-top: 10vh;
+                margin-top: 10svh;
                 }
             }
             @media only screen and (max-width: 769px) {
                 max-height: 40vh;
+                max-height: 40svh;
             }
         }
     }
 }
 
 .divider-neon{
-    // height: 0.1rem;
     width: auto;
-    box-shadow: 0px -2px 5px 3px $font-shadow;  //todo shadow w dół
+    box-shadow: 0px -2px 5px 3px $font-shadow;
     background-color: $font;
 
 }
 
 .about{
     background-color: $start-bg-1;
-    padding-top: 10vh;
+    padding-top: 4.5rem;
     display: flex;
     flex-wrap: wrap;
     .about-left{
@@ -161,7 +173,7 @@ nav{
         
         @media only screen and (max-width: 769px) {
             width: 90vw;
-            margin-bottom: 10vh;
+            margin-bottom: 4.5rem;
         }
         .about-img{
             float: left;
@@ -182,8 +194,6 @@ nav{
             bottom: 0.8rem;
             right: 1rem;
             font-size: 1.5rem;
-            // font-weight: bold;
-            // float: right;
             width: 2rem;
             transition: .5s;
             
@@ -210,7 +220,6 @@ nav{
     .about-right{
         margin-left: 2vw;
         width: 29vw;
-        // height: 60vh;
         background-image: linear-gradient(135deg, $start-bg-2, $start-bg-1);
         box-shadow: inset 0px 0px 7px 3px $font-shadow;
         border-radius: .5rem;
@@ -233,12 +242,10 @@ nav{
         color: $font-portfolio;
         font-weight: bold;
         font-size: 1.1rem;
-        // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
     }
     .data-line{
         margin-bottom: 0.4rem;
         text-align: center;
-        // font-weight: bold;
         font-size: 1rem;
         a{
             color: $font-shadow;
@@ -260,7 +267,7 @@ nav{
 }
 
 
-.portfolio{//todo weź tam podziel na po równo
+.portfolio{
     width: 100%;
     background-color: $start-bg-1;
     .row-custom{
@@ -289,15 +296,10 @@ nav{
     }
 
     .portfolio-col{
-        padding-top: 10vh;
-        padding-bottom: 10vh;
+        padding-top: 4.5rem;
         .box{
             padding: 1rem;
-
-            // width: 70%;
-            // margin-left: 5vw;
             background-image: linear-gradient(225deg, $notes-bg-2, $notes-bg-1);
-            // border: solid 0.3vw $font;
             border-radius: 0.5rem;
             box-shadow: inset 0px 0px 7px 3px $font-shadow;
 
@@ -359,7 +361,6 @@ nav{
         }
         .right-box{
             transition: opacity .4s linear;
-            // margin-left: 3vw;
             margin-right: 0;
             display: block;
             padding-left: 2rem;
@@ -383,7 +384,6 @@ nav{
                 text-align: justify;
                 color: $font-portfolio;
                 font-size: 1rem;
-                // float: left;
                 width: 100%;
                 a{
                     color: $a-portfolio;
@@ -396,7 +396,6 @@ nav{
                         text-decoration: none;
                     }
                 }
-                // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             }
         }
     }
@@ -404,7 +403,8 @@ nav{
 
 .contact{
     background-color: $start-bg-1;
-    padding-bottom: 10vh;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
     .contact-container{
         background-image: linear-gradient($start-bg-1, $start-bg-2);
         max-width: 90vw;
@@ -424,30 +424,59 @@ nav{
             font-size: 1.4rem;
             text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
         }
+        
+        .data-line-contact{
+            display: flex;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+            label{
+                color: $font-shadow;  
+                flex-basis: 100%;
+                order: 1;
 
-        label{
-            color: $font-shadow; //todo zapalać jak się wpisuje 
-            width: 100%;
-        }
-        .input-field{
-            background-color: $start-bg-1;
-            width: 100%;
-            border: none;
-            color: $font-portfolio;
-            border-radius: .2rem;
-            box-shadow: inset 0px 0px 4px 1px $font-shadow;
-            padding: .5rem;
-            outline: none;
-            &:focus-visible{
-                outline: 1px solid $font;
-                box-shadow: 0px 0px 4px 3px $font-shadow;
+            }
+            .input-field{
+                order: 2;
+                background-color: $start-bg-1;
+                width: 100%;
+                border: none;
+                color: $font-portfolio;
+                border-radius: .2rem;
+                box-shadow: inset 0px 0px 4px 1px $font-shadow;
+                padding: .5rem;
+                outline: none;
+                margin-bottom: .7rem;
+                transition: .5s;
+                &:focus-visible{
+                    transition: .5s;
+                    outline: 0px solid $font;
+                    box-shadow: inset 0px 0px 4px 3px $font-shadow;
+                }
+                
+            }
+            #name:focus-visible ~ #nameLabel{
+                transition: .5s;
+                color: $font;
+                text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+            }
+            #email:focus-visible ~ #emailLabel{
+                transition: .5s;
+                color: $font;
+                text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+            }
+            #message:focus-visible ~ #messageLabel{
+                transition: .5s;
+                color: $font;
+                text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             }
         }
+        
 
         .button-container{
             display: flex;
             justify-content: center;
-            
+            margin-top: .5rem;
+            margin-bottom: .5rem;
             button{
                 margin-left: auto;
                 margin-right: auto;
@@ -508,12 +537,11 @@ nav{
     background-image: linear-gradient(#0000001d, #0000002d);
 
     .modal-lg{
+        width: 70rem;
         max-width: 90% !important;
     }
-    // background-color: $bg;
     .modal-content{
         background-image: linear-gradient(to top, $start-bg-1, $start-bg-2);
-        // border: $font 0.2rem solid;
         box-shadow: inset 0px 0px 8px 4px $modal-shadow;
         .modal-header{
             text-align: center;
@@ -531,10 +559,7 @@ nav{
             font-weight: bolder !important;
             text-shadow: none;
             font-size: 1.8rem;
-            // margin-right: 0px;
-            // margin-top: 0px;
-            height: 100%; //todo jak close ma wyglądać
-            // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+            height: 100%;
             span{
                 background-color: #fff0;
                 border:none;
@@ -578,9 +603,7 @@ nav{
             text-align: justify;
             color: $font-portfolio;
             font-size: 1rem;
-            // float: left;
             width: 100%;
-            // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
         }
 
         .modal-footer{
@@ -603,6 +626,14 @@ nav{
         }
     }
         
+}
+
+body.modal-open .no-modal-content{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }
 
 .clickable-icon-neon{
