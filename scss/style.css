@@ -435,6 +435,39 @@ nav .navbar-toggler i {
   transition: 0.5s;
 }
 
+.footer {
+  align-items: center;
+  background-color: #110505;
+  box-shadow: 0 -2px 3px 2px rgba(192, 77, 0, 0.7450980392);
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.footer .copyright {
+  margin-top: 0.5rem;
+  color: rgba(192, 77, 0, 0.7450980392);
+  width: 100%;
+}
+.footer .copyright span {
+  font-size: 1.3rem;
+}
+.footer a {
+  color: rgba(192, 77, 0, 0.7450980392);
+  transition: 0.5s;
+}
+.footer a:hover {
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  transition: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer a i {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+
 .modal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1137254902), rgba(0, 0, 0, 0.1764705882));
 }
