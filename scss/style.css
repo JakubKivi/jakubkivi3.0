@@ -2,6 +2,11 @@ nav {
   background-color: #110505;
   box-shadow: 0px 2px 5px 3px rgba(192, 77, 0, 0.7450980392);
 }
+@media only screen and (max-width: 769px) {
+  nav li {
+    width: 100%;
+  }
+}
 nav a {
   transition: 0.4s;
   color: rgba(192, 77, 0, 0.7450980392);
@@ -342,12 +347,11 @@ nav .navbar-toggler i {
 }
 .portfolio .portfolio-col .right-box {
   background-image: linear-gradient(135deg, #331111, #110505);
-}
-.portfolio .portfolio-col .right-box {
   transition: opacity 0.4s linear;
   margin-right: 0;
   display: block;
   padding-left: 2rem;
+  height: 100%;
   padding-right: 2rem;
 }
 @media only screen and (max-width: 769px) {
@@ -511,10 +515,12 @@ nav .navbar-toggler i {
 
 .modal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1137254902), rgba(0, 0, 0, 0.1764705882));
+  padding-right: 0 !important;
 }
 .modal .modal-lg {
   width: 70rem;
   max-width: 90% !important;
+  margin: 1rem auto;
 }
 .modal .modal-content {
   background-image: linear-gradient(to top, #110505, #331111);

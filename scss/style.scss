@@ -25,6 +25,11 @@ $image-shadow: #110505b2;
 
 nav{
     background-color: $nav;
+    @media only screen and (max-width: 769px) {
+        li{
+        width: 100%;
+        }
+    }
     a{
         transition: 0.4s;
         color: $font-shadow;
@@ -50,7 +55,7 @@ nav{
     .navbar-toggler{
         // border: 2px solid $font;
         box-shadow: 0px 0px 4px 3px $font-shadow;
-        i{ //todo jeden pod drugim po kliknięciu
+        i{ 
             color: $font;
             text-shadow: 0px 0px 3px $font-shadow, 0px 0px 3px $font-shadow;
         }
@@ -355,15 +360,13 @@ nav{
         .box-left{
             padding-bottom: 2rem;
         }
-
         .right-box{
             background-image: linear-gradient(135deg, $notes-bg-2, $notes-bg-1);
-        }
-        .right-box{
             transition: opacity .4s linear;
             margin-right: 0;
             display: block;
             padding-left: 2rem;
+            height: 100%;
             padding-right: 2rem;
             @media only screen and (max-width: 769px) {
                 display: none;
@@ -532,13 +535,14 @@ nav{
 }
 
 .modal{
-    
-    // filter: blur(8px); //todo 
     background-image: linear-gradient(#0000001d, #0000002d);
-
+    padding-right: 0 !important;
     .modal-lg{
+
         width: 70rem;
         max-width: 90% !important;
+        
+        margin: 1rem auto;
     }
     .modal-content{
         background-image: linear-gradient(to top, $start-bg-1, $start-bg-2);
