@@ -573,6 +573,27 @@ nav .navbar-toggler i {
   transition: 0.5s;
   text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
+.modal .modal-content .modal-stack {
+  width: 100%;
+  color: rgba(239, 136, 63, 0.8549019608);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.modal .modal-content .modal-stack p {
+  margin-left: auto;
+}
+.modal .modal-content .modal-stack .icons {
+  margin-right: auto;
+  display: inline;
+  align-self: center;
+}
+.modal .modal-content .modal-stack .icons svg {
+  height: 2rem;
+  width: 2rem;
+}
 .modal .modal-content img {
   margin-top: 1rem;
   margin-right: 2rem;
