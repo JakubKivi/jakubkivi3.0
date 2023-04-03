@@ -561,7 +561,7 @@ nav{
             font-size: 1.4rem;
             text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             border-bottom: $font 0rem solid;
-             box-shadow: inset 0px 0px 2px 1px $font-shadow;
+            box-shadow: inset 0px 0px 2px 1px $font-shadow;
         }
         .close{
             opacity: 1;
@@ -596,24 +596,50 @@ nav{
             
         }
         .modal-stack{
+            box-shadow: inset 0px 0px 2px 1px $font-shadow;
             width: 100%;
             color: $font;
-            margin-top:.5rem;
-            margin-bottom: .5rem;
+            padding-top:.5rem;
             display: flex;
             align-items: center;
-            vertical-align: middle;
-            p{
-                margin-left: auto;
-            }
+            justify-content: center;
+            padding-bottom: .3rem;
             .icons{
-                margin-right: auto;
-                display: inline;
-                align-self: center;
-                svg{
-                    height: 2rem;
-                    width: 2rem;
+                margin-left: .5rem;
+                .portfolio-icon{
+                    display: inline-block;
+                    position: relative;
+                    svg{
+                    height: 1.5rem;
+                    width: 1.5rem;
+                        &:hover{
+                            // cursor: pointer;
+                        }
+                    }
+                    .sfml{
+                        height: 1.2rem;
+                        width: 1.2rem;
+                    }
+                    .tooltiptext {
+                        visibility: hidden;
+                        background-color: $nav;
+                        color: $font;
+                        text-align: center;
+                        padding: 5px 0;
+                        border-radius: .2rem;
+                        position: absolute;
+                        z-index: 5;
+                        width: 140px;
+                        bottom: 100%;
+                        left: 50%;
+                        margin-left: -70px; 
+                        box-shadow: inset 0px 0px 2px 1px $font-shadow;
+                      }
                 }
+                .portfolio-icon:hover .tooltiptext {
+                    visibility: visible;
+                }
+                
             }
         }
         img{
@@ -625,7 +651,9 @@ nav{
             margin-bottom: 1.5rem;
             width: 100%;
             max-width: 20rem;
-            max-height: 20rem;
+            @media only screen and (max-width: 769px) {
+                max-width: 100%;
+            }
         }
 
         .modal-body{
