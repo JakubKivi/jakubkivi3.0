@@ -23,6 +23,32 @@ $image-shadow: #110505b2;
 
 @use "sass:string";
 
+@keyframes blinkShine {
+    0%{
+        color: $font-shadow;
+    }
+    60% {
+        color: $font;
+        text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;    
+    }
+    80%{
+        color: $font-shadow;
+        text-shadow: none;
+    }
+    90%{
+        color: $font;
+        text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;    
+    }
+    95%{
+        color: $font-shadow;
+        text-shadow: none;
+    }
+    100%{
+        color: $font;
+        text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;    
+    }
+}
+
 nav{
     background-color: $nav;
     @media only screen and (max-width: 769px) {
@@ -203,11 +229,11 @@ nav{
             transition: .5s;
             
             &:hover{
-                color: $font;
-                text-shadow: 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
-                transition: .5s;
+                animation: blinkShine .6s;
                 cursor: pointer;
                 text-decoration: none;
+                color: $font;
+                text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;            
             }
         }
         .arrow-left{

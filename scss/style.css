@@ -1,3 +1,28 @@
+@keyframes blinkShine {
+  0% {
+    color: rgba(192, 77, 0, 0.7450980392);
+  }
+  60% {
+    color: rgba(239, 136, 63, 0.8549019608);
+    text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  }
+  80% {
+    color: rgba(192, 77, 0, 0.7450980392);
+    text-shadow: none;
+  }
+  90% {
+    color: rgba(239, 136, 63, 0.8549019608);
+    text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  }
+  95% {
+    color: rgba(192, 77, 0, 0.7450980392);
+    text-shadow: none;
+  }
+  100% {
+    color: rgba(239, 136, 63, 0.8549019608);
+    text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  }
+}
 nav {
   background-color: #110505;
   box-shadow: 0px 2px 5px 3px rgba(192, 77, 0, 0.7450980392);
@@ -189,11 +214,11 @@ nav .navbar-toggler i {
   transition: 0.5s;
 }
 .about .about-left .arrow:hover {
-  color: rgba(239, 136, 63, 0.8549019608);
-  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
-  transition: 0.5s;
+  animation: blinkShine 0.6s;
   cursor: pointer;
   text-decoration: none;
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
 .about .about-left .arrow-left {
   left: 1rem;
