@@ -23,6 +23,16 @@
     text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
   }
 }
+.background-body {
+  position: fixed;
+  width: 120%;
+  left: -10%;
+  height: 120vh;
+  top: -10vh;
+  background-color: #110505;
+  z-index: -100;
+}
+
 nav {
   background-color: #110505;
   box-shadow: 0px 2px 5px 3px rgba(192, 77, 0, 0.7450980392);
@@ -362,6 +372,9 @@ nav .navbar-toggler i {
   box-shadow: 0 0 4px 3px rgba(17, 5, 5, 0.6980392157);
   transition: 0.3s ease-in-out;
   border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .portfolio .portfolio-col .box .box-box div:hover {
   background-color: rgba(192, 77, 0, 0.8117647059);
@@ -598,6 +611,9 @@ nav .navbar-toggler i {
   transition: 0.5s;
   text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
+.modal .modal-content .close:focus {
+  outline: 0;
+}
 .modal .modal-content .subtitle-shadow {
   width: 100%;
   box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
@@ -607,11 +623,11 @@ nav .navbar-toggler i {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  max-width: 30rem;
+  flex-wrap: wrap;
   color: rgba(239, 136, 63, 0.8549019608);
 }
 .modal .modal-content .subtitle-shadow .subtitle .modal-status {
-  width: 50%;
+  width: 33.3%;
   display: inline-block;
   display: flex;
   align-items: center;
@@ -619,10 +635,16 @@ nav .navbar-toggler i {
 }
 .modal .modal-content .subtitle-shadow .subtitle .modal-status span {
   margin-left: 0.3rem;
-  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+}
+@media only screen and (max-width: 769px) {
+  .modal .modal-content .subtitle-shadow .subtitle .modal-status {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
 }
 .modal .modal-content .subtitle-shadow .modal-stack {
-  width: 50%;
+  width: 33.3%;
   color: rgba(239, 136, 63, 0.8549019608);
   padding-top: 0.5rem;
   display: flex;
@@ -630,20 +652,37 @@ nav .navbar-toggler i {
   justify-content: center;
   padding-bottom: 0.6rem;
 }
+@media only screen and (max-width: 769px) {
+  .modal .modal-content .subtitle-shadow .modal-stack {
+    width: 100%;
+  }
+}
 .modal .modal-content .subtitle-shadow .modal-stack .icons {
   margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 769px) {
+  .modal .modal-content .subtitle-shadow .modal-stack .icons {
+    margin-left: 0rem;
+  }
 }
 .modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon {
   display: inline-block;
   position: relative;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
 }
 .modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon svg {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
 }
-.modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon .sfml {
-  height: 1.2rem;
-  width: 1.2rem;
+.modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon svg:hover {
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
 .modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon .tooltiptext {
   visibility: hidden;
@@ -656,16 +695,30 @@ nav .navbar-toggler i {
   border-radius: 0.2rem;
   position: absolute;
   z-index: 5;
-  width: 140px;
-  bottom: 100%;
+  width: 10rem;
+  bottom: 110%;
   left: 50%;
-  margin-left: -70px;
+  margin-left: -5rem;
   box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
 }
 .modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon:hover .tooltiptext {
   opacity: 1;
   transition: 0.5s;
   visibility: visible;
+}
+.modal .modal-content .subtitle-shadow .modal-time {
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 769px) {
+  .modal .modal-content .subtitle-shadow .modal-time {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 }
 .modal .modal-content img {
   margin-top: 1rem;
