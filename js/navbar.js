@@ -36,11 +36,9 @@ function scrollCustom(){
     });
   
     navLi.forEach((li) => {
-        console.log(li.children[0]);
       if(li.children[0].classList.contains("active")){
         li.children[0].classList.remove("active");
       }
-      console.log(current);
       if (li.classList.contains(current)) {
         li.children[0].classList.add("active");
       }

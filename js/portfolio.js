@@ -11,13 +11,13 @@ async function onSelectorClicked(element){
     if(element!=null){
         var id = element.currentTarget.getAttribute("data-userid");
     }else{
-        var id = "1";
+        var id = "0";
         var firstLoad =true;
     } 
     if(width>769){
         if(id!=activeSelector){
-            selector[activeSelector-1].children[0].classList.remove("active");
-            selector[id-1].children[0].classList.add("active");
+            selector[activeSelector].children[0].classList.remove("active");
+            selector[id].children[0].classList.add("active");
             activeSelector = id;
             var rightColumn = document.getElementById("right-column");
             rightColumn.style.opacity = 0;
@@ -27,7 +27,6 @@ async function onSelectorClicked(element){
             ChangePortfolioContent(id, rightColumn);
         }
     }else if(!firstLoad){
-        console.log("openpopup");
         var modalName = '#portfolio-modal-'+id;
         $(modalName).modal();
     }
