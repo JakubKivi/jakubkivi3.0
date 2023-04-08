@@ -619,55 +619,82 @@ nav{
                 transition: .5s;
                 text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             }
-            
         }
-        .modal-stack{
-            box-shadow: inset 0px 0px 2px 1px $font-shadow;
+        .subtitle-shadow{
             width: 100%;
-            color: $font;
-            padding-top:.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: .3rem;
-            .icons{
-                margin-left: .5rem;
-                .portfolio-icon{
+            box-shadow: inset 0px 0px 2px 1px $font-shadow;
+
+            .subtitle{
+                width: 100%;
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 30rem;
+                color: $font;
+                .modal-status{
+                    width: 50%;
                     display: inline-block;
-                    position: relative;
-                    svg{
-                    height: 1.5rem;
-                    width: 1.5rem;
-                        &:hover{
-                            // cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    span{
+                        margin-left: .3rem;
+                        text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+                    }
+                }
+            }
+            .modal-stack{
+                width: 50%;
+                color: $font;
+                padding-top:.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: .6rem;
+                .icons{
+                    margin-left: .5rem;
+                    .portfolio-icon{
+                        display: inline-block;
+                        position: relative;
+                        svg{
+                        height: 1.5rem;
+                        width: 1.5rem;
+                            &:hover{
+                                // cursor: pointer;
+                            }
+                        }
+                        .sfml{
+                            height: 1.2rem;
+                            width: 1.2rem;
+                        }
+                        .tooltiptext {
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: opacity .5s;
+                            background-color: $nav;
+                            color: $font;
+                            text-align: center;
+                            padding: 5px 0;
+                            border-radius: .2rem;
+                            position: absolute;
+                            z-index: 5;
+                            width: 140px;
+                            bottom: 100%;
+                            left: 50%;
+                            margin-left: -70px; 
+                            box-shadow: inset 0px 0px 2px 1px $font-shadow;
                         }
                     }
-                    .sfml{
-                        height: 1.2rem;
-                        width: 1.2rem;
+                    .portfolio-icon:hover .tooltiptext {
+                        opacity: 1;
+                        transition: .5s;
+                        visibility: visible;
                     }
-                    .tooltiptext {
-                        visibility: hidden;
-                        background-color: $nav;
-                        color: $font;
-                        text-align: center;
-                        padding: 5px 0;
-                        border-radius: .2rem;
-                        position: absolute;
-                        z-index: 5;
-                        width: 140px;
-                        bottom: 100%;
-                        left: 50%;
-                        margin-left: -70px; 
-                        box-shadow: inset 0px 0px 2px 1px $font-shadow;
-                      }
+                    
                 }
-                .portfolio-icon:hover .tooltiptext {
-                    visibility: visible;
-                }
-                
             }
         }
+        
         img{
             margin-top: 1rem;
             margin-right: 2rem;
@@ -710,7 +737,7 @@ nav{
                 transition: .5s;
                 &:hover{
                     color: $font;
-                    transition: .5s;  //todotime "zaświecać tak bzyt bzyt" ~asia
+                    transition: .5s;  
                 }
             }
         }

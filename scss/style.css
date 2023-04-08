@@ -598,33 +598,57 @@ nav .navbar-toggler i {
   transition: 0.5s;
   text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
 }
-.modal .modal-content .modal-stack {
-  box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
+.modal .modal-content .subtitle-shadow {
   width: 100%;
+  box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
+}
+.modal .modal-content .subtitle-shadow .subtitle {
+  width: 100%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30rem;
+  color: rgba(239, 136, 63, 0.8549019608);
+}
+.modal .modal-content .subtitle-shadow .subtitle .modal-status {
+  width: 50%;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-content .subtitle-shadow .subtitle .modal-status span {
+  margin-left: 0.3rem;
+  text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
+}
+.modal .modal-content .subtitle-shadow .modal-stack {
+  width: 50%;
   color: rgba(239, 136, 63, 0.8549019608);
   padding-top: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.6rem;
 }
-.modal .modal-content .modal-stack .icons {
+.modal .modal-content .subtitle-shadow .modal-stack .icons {
   margin-left: 0.5rem;
 }
-.modal .modal-content .modal-stack .icons .portfolio-icon {
+.modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon {
   display: inline-block;
   position: relative;
 }
-.modal .modal-content .modal-stack .icons .portfolio-icon svg {
+.modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon svg {
   height: 1.5rem;
   width: 1.5rem;
 }
-.modal .modal-content .modal-stack .icons .portfolio-icon .sfml {
+.modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon .sfml {
   height: 1.2rem;
   width: 1.2rem;
 }
-.modal .modal-content .modal-stack .icons .portfolio-icon .tooltiptext {
+.modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon .tooltiptext {
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
   background-color: #110505;
   color: rgba(239, 136, 63, 0.8549019608);
   text-align: center;
@@ -638,7 +662,9 @@ nav .navbar-toggler i {
   margin-left: -70px;
   box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
 }
-.modal .modal-content .modal-stack .icons .portfolio-icon:hover .tooltiptext {
+.modal .modal-content .subtitle-shadow .modal-stack .icons .portfolio-icon:hover .tooltiptext {
+  opacity: 1;
+  transition: 0.5s;
   visibility: visible;
 }
 .modal .modal-content img {
