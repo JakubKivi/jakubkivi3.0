@@ -1,6 +1,8 @@
 $nav: #110505;
 $font-shadow: #c04d00be;
 $font: #ef883fda;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
+$font-select: #e66f1bda;
+$font-select-bg: #ef883f59;
 
 $font-portfolio: rgba(255, 159, 104, 0.567);
 $a-portfolio: #c04d00f2;
@@ -27,11 +29,11 @@ $image-shadow: #110505b2;
     0%{
         color: $font-shadow;
     }
-    60% {
+    20% {
         color: $font;
         text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;    
     }
-    80%{
+    30%{
         color: $font-shadow;
         text-shadow: none;
     }
@@ -47,6 +49,16 @@ $image-shadow: #110505b2;
         color: $font;
         text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;    
     }
+}
+
+//selected text colours
+::-moz-selection { /* Code for Firefox */
+    color: $font-select;
+    background: $font-select-bg;
+}
+::selection {
+    color: $font-select;
+    background: $font-select-bg;
 }
 
 .background-body{
@@ -201,6 +213,11 @@ nav{
     padding-top: 4.5rem;
     display: flex;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: 769px) {
+        flex-direction: column-reverse;
+    }
+
     .about-left{
         padding-top: 1rem;
         margin-left: 5vw;
@@ -214,7 +231,7 @@ nav{
         
         @media only screen and (max-width: 769px) {
             width: 90vw;
-            margin-bottom: 4.5rem;
+            margin-top: 4.5rem;
         }
         .about-img{
             float: left;
@@ -268,6 +285,7 @@ nav{
         padding-bottom: 3rem;
         margin-bottom: auto;
         @media only screen and (max-width: 769px) {
+            flex-direction: column-reverse;
             margin-left: 5vw;
             width: 90vw;
         }
@@ -665,7 +683,7 @@ nav{
             }
             .modal-stack{
                 width: 33.3%;
-                color: $font;
+                color: $font-shadow;
                 padding-top:.5rem;
                 display: flex;
                 align-items: center;

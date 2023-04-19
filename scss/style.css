@@ -2,11 +2,11 @@
   0% {
     color: rgba(192, 77, 0, 0.7450980392);
   }
-  60% {
+  20% {
     color: rgba(239, 136, 63, 0.8549019608);
     text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
   }
-  80% {
+  30% {
     color: rgba(192, 77, 0, 0.7450980392);
     text-shadow: none;
   }
@@ -23,6 +23,16 @@
     text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
   }
 }
+::-moz-selection { /* Code for Firefox */
+  color: rgba(230, 111, 27, 0.8549019608);
+  background: rgba(239, 136, 63, 0.3490196078);
+}
+
+::selection {
+  color: rgba(230, 111, 27, 0.8549019608);
+  background: rgba(239, 136, 63, 0.3490196078);
+}
+
 .background-body {
   position: fixed;
   width: 120%;
@@ -182,6 +192,11 @@ nav .navbar-toggler i {
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 769px) {
+  .about {
+    flex-direction: column-reverse;
+  }
+}
 .about .about-left {
   padding-top: 1rem;
   margin-left: 5vw;
@@ -198,7 +213,7 @@ nav .navbar-toggler i {
 @media only screen and (max-width: 769px) {
   .about .about-left {
     width: 90vw;
-    margin-bottom: 4.5rem;
+    margin-top: 4.5rem;
   }
 }
 .about .about-left .about-img {
@@ -250,6 +265,7 @@ nav .navbar-toggler i {
 }
 @media only screen and (max-width: 769px) {
   .about .about-right {
+    flex-direction: column-reverse;
     margin-left: 5vw;
     width: 90vw;
   }
@@ -645,7 +661,7 @@ nav .navbar-toggler i {
 }
 .modal .modal-content .subtitle-shadow .modal-stack {
   width: 33.3%;
-  color: rgba(239, 136, 63, 0.8549019608);
+  color: rgba(192, 77, 0, 0.7450980392);
   padding-top: 0.5rem;
   display: flex;
   align-items: center;
