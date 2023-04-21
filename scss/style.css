@@ -23,17 +23,8 @@
     text-shadow: 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392), 0px 0px 4px rgba(192, 77, 0, 0.7450980392);
   }
 }
-::-moz-selection { /* Code for Firefox */
-  color: rgba(230, 111, 27, 0.8549019608);
-  background: rgba(239, 136, 63, 0.3490196078);
-}
-
-::selection {
-  color: rgba(230, 111, 27, 0.8549019608);
-  background: rgba(239, 136, 63, 0.3490196078);
-}
 body {
-  animation: body-loading 2s;
+  animation: body-loading 4s;
 }
 @keyframes body-loading {
   0% {
@@ -54,11 +45,29 @@ body {
   height: 100svh;
   z-index: 10000;
   background-image: linear-gradient(to right, #110505, #331111);
-  animation: loading 3s;
+  animation: loading 6s;
   opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.loading .starting-right-div {
+  height: 100vh;
+  height: 100svh;
+  text-align: center;
+}
+@media only screen and (max-width: 769px) {
+  .loading .starting-right-div {
+    margin-top: 5vh;
+    margin-top: 5svh;
+    margin-bottom: 5vh;
+    margin-bottom: 5svh;
+    height: 50vh;
+    height: 50svh;
+  }
+}
+.loading .starting-right-div div {
+  width: 100%;
 }
 @keyframes loading {
   0% {
@@ -128,9 +137,20 @@ body {
   }
 }
 .loading .load-container {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 9/16;
   position: relative;
+  border-radius: 0.3rem;
+  max-height: 60vh;
+  max-height: 60svh;
+}
+@media only screen and (max-width: 769px) {
+  .loading .load-container {
+    max-height: 40vh;
+    max-height: 40svh;
+    margin-top: 10vh;
+    margin-top: 10svh;
+  }
 }
 .loading .load {
   position: absolute;
@@ -139,29 +159,39 @@ body {
 }
 .loading .top {
   top: 0;
-  width: 200px;
+  max-width: 100%;
   height: 2px;
-  animation: topA 2s linear;
+  animation: topA 4s linear;
 }
 .loading .right {
   right: 0;
-  width: 2px;
-  animation: rightA 2s linear;
-  height: 200px;
+  max-width: 2px;
+  animation: rightA 4s linear;
+  height: 100%;
 }
 .loading .bottom {
   bottom: 0;
   height: 2px;
-  animation: bottomA 2s linear;
-  width: 200px;
+  animation: bottomA 4s linear;
+  max-width: 100%;
   right: 0;
 }
 .loading .left {
-  width: 2px;
+  max-width: 2px;
   height: 0;
-  animation: leftA 2s linear;
-  height: 200px;
+  animation: leftA 4s linear;
+  height: 100%;
   bottom: 0;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: rgba(230, 111, 27, 0.8549019608);
+  background: rgba(239, 136, 63, 0.3490196078);
+}
+
+::selection {
+  color: rgba(230, 111, 27, 0.8549019608);
+  background: rgba(239, 136, 63, 0.3490196078);
 }
 
 .background-body {
