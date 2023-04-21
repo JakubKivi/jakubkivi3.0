@@ -24,7 +24,7 @@
   }
 }
 body {
-  animation: body-loading 4s;
+  animation: body-loading 1s;
 }
 @keyframes body-loading {
   0% {
@@ -44,9 +44,9 @@ body {
   width: 100%;
   height: 100svh;
   z-index: 10000;
-  background-image: linear-gradient(to right, #110505, #331111);
-  animation: loading 6s;
-  opacity: 0;
+  animation: loading 1.5s;
+  opacity: 1;
+  transition: opacity 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,16 +68,20 @@ body {
 }
 .loading .starting-right-div div {
   width: 100%;
+  aspect-ratio: 9/16;
+  max-height: 60vh;
+  max-height: 60svh;
 }
-@keyframes loading {
-  0% {
-    opacity: 1;
+@media only screen and (max-width: 769px) {
+  .loading .starting-right-div div {
+    max-height: 40vh;
+    max-height: 40svh;
   }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+}
+@media only screen and (max-width: 769px) {
+  .loading .starting-right-div .load-div {
+    margin-top: 10vh;
+    margin-top: 10svh;
   }
 }
 @keyframes topA {
@@ -138,7 +142,6 @@ body {
 }
 .loading .load-container {
   width: 100%;
-  aspect-ratio: 9/16;
   position: relative;
   border-radius: 0.3rem;
   max-height: 60vh;
@@ -148,40 +151,46 @@ body {
   .loading .load-container {
     max-height: 40vh;
     max-height: 40svh;
-    margin-top: 10vh;
-    margin-top: 10svh;
+    margin-top: 20vh;
+    margin-top: 20svh;
   }
 }
 .loading .load {
   position: absolute;
   background-color: #ef883f;
+  opacity: 0;
   box-shadow: 0px 0px 4px 3px rgba(192, 77, 0, 0.7450980392);
 }
 .loading .top {
+  opacity: 1;
   top: 0;
   max-width: 100%;
   height: 2px;
-  animation: topA 4s linear;
+  animation: topA 1s linear;
 }
 .loading .right {
+  opacity: 1;
   right: 0;
+  top: 0;
   max-width: 2px;
-  animation: rightA 4s linear;
+  animation: rightA 1s linear;
   height: 100%;
 }
 .loading .bottom {
+  opacity: 1;
   bottom: 0;
   height: 2px;
-  animation: bottomA 4s linear;
+  animation: bottomA 1s linear;
   max-width: 100%;
   right: 0;
 }
 .loading .left {
+  opacity: 1;
   max-width: 2px;
-  height: 0;
-  animation: leftA 4s linear;
-  height: 100%;
   bottom: 0;
+  height: 0;
+  animation: leftA 1s linear;
+  height: 100%;
 }
 
 ::-moz-selection { /* Code for Firefox */

@@ -1,4 +1,5 @@
 function squareBlink() {
+  
     var square =  document.getElementById("squareBlink")
     var text =  document.getElementById("second-line-text")
     if(square.classList.contains("square-blink-off")){

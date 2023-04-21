@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "sass:string";
+
 $nav: #110505;
 $font-shadow: #c04d00be;
 $font: #ef883fda;  //You are also obligated to change 'nav-toggler-span-icon' variable (remember to convert to rgba)
@@ -5,8 +8,8 @@ $font-select: #e66f1bda;
 $font-select-bg: #ef883f59;
 
 $animation-color: #ef883fff;
-$animation-time: 4s;
-$animation-ratio: 2/4; //how long it takes to disapear = animation-time *animation-ratio
+$animation-time: 1s; //pamiętaj zmienić też zmienną w onLoad.js
+$animation-ratio: math.div(2, 4); //how long it takes to disapear = animation-time *animation-ratio
 
 $font-portfolio: rgba(255, 159, 104, 0.567);
 $a-portfolio: #c04d00f2;
@@ -26,8 +29,6 @@ $modal-bg: $start-bg-2;
 $modal-shadow: $font-shadow;
 
 $image-shadow: #110505b2;
-
-@use "sass:string";
 
 @keyframes blinkShine {
     0%{
@@ -72,9 +73,9 @@ body{
     width: 100%;
     height: 100svh;
     z-index: 10000;
-    background-image: linear-gradient(to right, $start-bg-1, $start-bg-2);
     animation: loading $animation-time+$animation-time*$animation-ratio;
-    opacity: 0;
+    opacity: 1;
+    transition: opacity 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,17 +93,19 @@ body{
         }
         div{
             width: 100%;
+            aspect-ratio: 9/16;
+            max-height: 60vh;
+            max-height: 60svh;
+            @media only screen and (max-width: 769px) {
+                max-height: 40vh;
+                max-height: 40svh;
+            }
         }
-    }
-    @keyframes loading{
-        0%{
-            opacity: 1;
+        .load-div{
+            @media only screen and (max-width: 769px) {
+                margin-top: 10vh;
+                margin-top: 10svh;
         }
-        80%{
-            opacity: 1;
-        }
-        100%{
-            opacity:0;
         }
     }
     @keyframes  topA{
@@ -164,7 +167,6 @@ body{
     }
     .load-container{
         width: 100%;
-        aspect-ratio: 9/16;
         position: relative;
         border-radius: .3rem;
         max-height: 60vh;
@@ -172,28 +174,33 @@ body{
         @media only screen and (max-width: 769px) {
             max-height: 40vh;
             max-height: 40svh;
-            margin-top: 10vh;
-            margin-top: 10svh;
+            margin-top: 20vh;
+            margin-top: 20svh;
         }
     }
     .load{
         position: absolute;
         background-color: $animation-color;
+        opacity: 0;
         box-shadow: 0px 0px 4px 3px $font-shadow;
     }
     .top{
+        opacity: 1;
         top:0;
         max-width: 100%;
         height: 2px;
         animation: topA $animation-time linear;
     }
     .right{
+        opacity: 1;
         right: 0;
+        top:0;
         max-width: 2px;
         animation: rightA $animation-time linear;
         height: 100%;
     }
     .bottom{
+        opacity: 1;
         bottom:0;
         height: 2px;
         animation: bottomA $animation-time linear;
@@ -201,11 +208,12 @@ body{
         right: 0;
     }
     .left{
+        opacity: 1;
         max-width: 2px;
+        bottom: 0;
         height: 0;
         animation: leftA $animation-time linear;
         height: 100%;
-        bottom: 0;
     }
 }
 
