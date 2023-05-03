@@ -14,6 +14,9 @@ window.onbeforeunload = function () {
 
     setTimeout(function(){
         document.getElementsByClassName('loading')[0].style.opacity = "0";
+        setTimeout(function(){
+            document.getElementsByClassName('loading')[0].style.display = "none";
+        }, 500);
     }, animationTime);
 
     var loads = document.getElementsByClassName("load");
@@ -23,5 +26,29 @@ window.onbeforeunload = function () {
     loads[3].classList.add("right");
     
     document.getElementsByClassName('load-container')[0].classList.add("mx-auto");
-    console.log(document.getElementsByClassName('load-container')[0].style.width +" => "+ document.getElementsByClassName('img-me')[0].offsetWidth);
   })
+
+
+  function handleBackPress(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    $('.modal').modal('hide');
+    $('.modal-backdrop').remove();
+  }
+  
+  var closedModalHashStateId = "#modalClosed";
+  var openModalHashStateId = "#modalOpen";
+  
+  window.location.hash = closedModalHashStateId;
+  
+  $(window).on('popstate', this.handleBackPress);
+  document.addEventListener("backbutton", this.handleBackPress, false);
+  
+  $('.modal').on('show.bs.modal', function(e) {
+    window.history.pushState('forward', null, './'+openModalHashStateId);
+  });
+  
+  $('.modal').on('hide.bs.modal', function(e) {
+    window.history.back();
+  });
+  

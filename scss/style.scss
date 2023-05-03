@@ -463,6 +463,11 @@ nav{
         font-weight: bold;
         font-size: 1.4rem;
         text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
+        .data-line-date{
+            color: $font-portfolio;
+            font-size: 0.8rem;
+            text-shadow: none;
+        }
     }
     .about-text-header-right{
         margin-bottom: 2rem;
