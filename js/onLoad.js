@@ -1,4 +1,4 @@
-var animationTime = 1000;
+var animationTime = 1500;
 
 onLoad();
 function onLoad(){

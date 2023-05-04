@@ -8,7 +8,7 @@ $font-select: #e66f1bda;
 $font-select-bg: #ef883f59;
 
 $animation-color: #ef883fff;
-$animation-time: 1s; //pamiętaj zmienić też zmienną w onLoad.js
+$animation-time: 1.5s; //pamiętaj zmienić też zmienną w onLoad.js
 $animation-ratio: math.div(2, 4); //how long it takes to disapear = animation-time *animation-ratio
 
 $font-portfolio: rgba(255, 159, 104, 0.567);
@@ -75,7 +75,7 @@ body{
     z-index: 10000;
     animation: loading $animation-time+$animation-time*$animation-ratio;
     opacity: 1;
-    transition: opacity 0.5s;
+    transition: opacity 1s;
     display: flex;
     align-items: center;
     justify-content: center;
