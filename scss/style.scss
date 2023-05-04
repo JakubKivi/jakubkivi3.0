@@ -11,6 +11,8 @@ $animation-color: #ef883fff;
 $animation-time: 1.5s; //pamiętaj zmienić też zmienną w onLoad.js
 $animation-ratio: math.div(2, 4); //how long it takes to disapear = animation-time *animation-ratio
 
+$blink-shine-animation-time: .6s;
+
 $font-portfolio: rgba(255, 159, 104, 0.567);
 $a-portfolio: #c04d00f2;
 
@@ -250,7 +252,7 @@ nav{
         // text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
         // font-weight: bold;
         &:hover{
-            transition: 0.4s;
+            animation: blinkShine $blink-shine-animation-time;
             color: $font;
             text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
         }
@@ -422,7 +424,7 @@ nav{
             transition: .5s;
             
             &:hover{
-                animation: blinkShine .6s;
+                animation: blinkShine $blink-shine-animation-time;
                 cursor: pointer;
                 text-decoration: none;
                 color: $font;
@@ -489,8 +491,8 @@ nav{
             transition: .5s;
             &:hover{
                 color: $font;
+                animation: blinkShine $blink-shine-animation-time;
                 text-shadow: 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
-                transition: .5s;
                 cursor: pointer;
                 text-decoration: none;
             }
@@ -755,9 +757,9 @@ nav{
         color: $font-shadow;
         transition: .5s;
         &:hover{
+            animation: blinkShine $blink-shine-animation-time;
             color: $font;
             text-shadow: 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
-            transition: .5s;
             cursor: pointer;
             text-decoration: none;
         }
@@ -817,8 +819,8 @@ nav{
             transition: .5s;
             &:hover{
                 opacity: 1;
+                animation: blinkShine $blink-shine-animation-time;
                 color: $font;
-                transition: .5s;
                 text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
             }
             &:focus{
@@ -996,7 +998,7 @@ body.modal-open .no-modal-content{
     transition: .5s;
     &:hover{
         color: $font;
-        transition: .5s;
+        animation: blinkShine $blink-shine-animation-time;
         text-shadow:   0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow, 0px 0px 4px $font-shadow;
     }
 }
