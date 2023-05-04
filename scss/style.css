@@ -931,6 +931,17 @@ nav .navbar-toggler i {
   padding-left: 5vw;
   padding-right: 5vw;
 }
+.modal .modal-content .modal-video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.modal .modal-content .modal-video iframe {
+  display: inline-block;
+  width: 800px;
+  max-width: 100%;
+  height: 400px;
+}
 .modal .modal-content .portfolio-text {
   margin-top: 0.2rem;
   text-align: justify;
