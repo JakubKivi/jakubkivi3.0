@@ -8,7 +8,7 @@ $font-select: #e66f1bda;
 $font-select-bg: #ef883f59;
 
 $animation-color: #ef883fff;
-$animation-time: 1.5s; //pamiętaj zmienić też zmienną w onLoad.js
+$animation-time: 1.5s; //remember to change variable in onLoad.js as well
 $animation-ratio: math.div(2, 4); //how long it takes to disapear = animation-time *animation-ratio
 
 $blink-shine-animation-time: .6s;
