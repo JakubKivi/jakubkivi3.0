@@ -6,15 +6,20 @@ async function aboutTextInsert(){
     aboutContainer.classList.add("hiding");
     await new Promise(r => setTimeout(r, 800));
     document.getElementById("about-text").innerHTML= aboutText[showPage];
+    document.getElementById("about-text-header").innerHTML = aboutHeader[showPage];
     aboutContainer.classList.remove("hiding");
 } 
 aboutTextInsert(showPage);
 function lArrow(){
-    showPage-=1;
-    aboutTextInsert();
+    if(showPage>0){
+        showPage-=1;
+        aboutTextInsert();
+    }
 }
 
 function rArrow(){
-    showPage+=1;
-    aboutTextInsert();
+    if(showPage<5){
+        showPage+=1;
+        aboutTextInsert();
+    }    
 }

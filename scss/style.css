@@ -370,6 +370,7 @@ nav .navbar-toggler i {
 .about .about-left {
   padding-top: 1rem;
   margin-left: 5vw;
+  padding-bottom: 4vw;
   width: 59vw;
   height: 100%;
   background-image: linear-gradient(-135deg, #331111, #110505);
@@ -587,7 +588,7 @@ nav .navbar-toggler i {
   margin-right: 0;
   display: block;
   padding-left: 2rem;
-  height: 100%;
+  overflow: hidden;
   padding-right: 2rem;
 }
 @media only screen and (max-width: 769px) {
@@ -595,15 +596,19 @@ nav .navbar-toggler i {
     display: none;
   }
 }
-.portfolio .portfolio-col .right-box img {
-  margin-top: 0.6rem;
+.portfolio .portfolio-col .right-box .img-container {
   float: left;
+}
+.portfolio .portfolio-col .right-box .img-container img {
+  margin-top: 0.6rem;
   max-width: 20rem;
   max-height: 15rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
   border-radius: 3px;
   box-shadow: 0px 0px 15px 6px rgba(17, 5, 5, 0.6980392157);
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .portfolio .portfolio-col .right-box .portfolio-text {
   margin-top: 0.2rem;
@@ -930,6 +935,26 @@ nav .navbar-toggler i {
   box-shadow: inset 0px 0px 2px 1px rgba(192, 77, 0, 0.7450980392);
   padding-left: 5vw;
   padding-right: 5vw;
+}
+.modal .modal-content .modal-body a {
+  color: rgba(192, 77, 0, 0.9490196078);
+  transition: 0.5s;
+}
+.modal .modal-content .modal-body a:hover {
+  opacity: 1;
+  color: rgba(239, 136, 63, 0.8549019608);
+  text-shadow: 0 0 3px rgba(192, 77, 0, 0.7450980392);
+  transition: 0.5s;
+  text-decoration: none;
+}
+.modal .modal-content .modal-body .modal-img-bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-content .modal-body .modal-img-bottom-container .modal-img-bottom {
+  width: 500px;
+  max-width: 100%;
 }
 .modal .modal-content .modal-video {
   display: flex;

@@ -389,6 +389,7 @@ nav{
     .about-left{
         padding-top: 1rem;
         margin-left: 5vw;
+        padding-bottom: 4vw;
         width: 59vw;
         height: 100%;
         background-image: linear-gradient(-135deg, $start-bg-2, $start-bg-1);
@@ -406,6 +407,7 @@ nav{
             max-width: 20rem;
             margin-left: 1.5rem;
             margin-right: 1.5rem;
+            
         }
         .about-text{
             margin-left: 1rem;
@@ -603,20 +605,24 @@ nav{
             margin-right: 0;
             display: block;
             padding-left: 2rem;
-            height: 100%;
+            
+            overflow: hidden;
             padding-right: 2rem;
             @media only screen and (max-width: 769px) {
                 display: none;
             }
-            img{
-                margin-top: 0.6rem;
+            .img-container{
                 float: left;
-                max-width: 20rem;
-                max-height: 15rem;
-                margin-right: 2rem;
-                margin-bottom: 1rem;
-                border-radius: 3px;
-                box-shadow: 0px 0px 15px 6px $image-shadow;
+                img{
+                    margin-top: 0.6rem;
+                    max-width: 20rem;
+                    max-height: 15rem;
+                    margin-right: 2rem;
+                    margin-bottom: 1rem;
+                    border-radius: 3px;
+                    box-shadow: 0px 0px 15px 6px $image-shadow;
+                    object-fit: contain;
+                }
             }
             
             .portfolio-text{
@@ -947,6 +953,26 @@ nav{
             box-shadow: inset 0px 0px 2px 1px $font-shadow;
             padding-left: 5vw;
             padding-right: 5vw;
+            a{
+                color: $a-portfolio;
+                transition: .5s;
+                &:hover{
+                    opacity: 1;
+                    color: $font;
+                    text-shadow: 0 0 3px $font-shadow;
+                    transition: .5s;
+                    text-decoration: none;
+                }
+            }
+            .modal-img-bottom-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .modal-img-bottom{
+                    width: 500px;
+                    max-width: 100%;
+                }
+            }
         }
         .modal-video{
             display: flex;
