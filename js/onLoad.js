@@ -50,5 +50,8 @@ window.onbeforeunload = function () {
   
   $('.modal').on('hide.bs.modal', function(e) {
     window.history.back();
+    // $(".modal iframe").attr("src", $(".modal iframe").attr("src"));
   });
+
+
   

@@ -951,10 +951,12 @@ nav .navbar-toggler i {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .modal .modal-content .modal-body .modal-img-bottom-container .modal-img-bottom {
   width: 500px;
   max-width: 100%;
+  margin-right: 0;
 }
 .modal .modal-content .modal-video {
   display: flex;

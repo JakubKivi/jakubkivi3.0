@@ -968,9 +968,11 @@ nav{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                width: 100%;
                 .modal-img-bottom{
                     width: 500px;
                     max-width: 100%;
+                    margin-right: 0;
                 }
             }
         }
