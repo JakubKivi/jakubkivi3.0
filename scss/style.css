@@ -390,8 +390,15 @@ nav .navbar-toggler i {
 .about .about-left .about-img {
   float: left;
   max-width: 20rem;
+  max-height: 20rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  overflow: hidden;
+}
+.about .about-left .about-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .about .about-left .about-text {
   margin-left: 1rem;
@@ -737,6 +744,10 @@ nav .navbar-toggler i {
 .footer .copyright span {
   font-size: 1.3rem;
 }
+.footer .copyright .hidden-button {
+  color: #110505;
+  cursor: default;
+}
 .footer a {
   color: rgba(192, 77, 0, 0.7450980392);
   transition: 0.5s;
@@ -838,6 +849,9 @@ nav .navbar-toggler i {
     margin-top: 0.5rem;
     width: 100%;
   }
+}
+.modal .modal-content .subtitle-shadow .subtitle .notebook-status {
+  width: 66.6%;
 }
 .modal .modal-content .subtitle-shadow .modal-stack {
   width: 33.3%;
