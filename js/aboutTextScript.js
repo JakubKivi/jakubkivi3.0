@@ -7,7 +7,7 @@ async function aboutTextInsert(){
     await new Promise(r => setTimeout(r, 800));
     document.getElementById("about-text").innerHTML= aboutText[showPage];
     document.getElementById("about-text-header").innerHTML = aboutHeader[showPage];
-    document.getElementById("about-img").setAttribute("src", "assets/about/"+(showPage+1)+".jpg");
+    document.getElementById("about-img").setAttribute("src", "assets/about/"+(showPage+1)+".webp");
     aboutContainer.classList.remove("hiding");
 } 
 aboutTextInsert(showPage);
